@@ -1,5 +1,5 @@
 aid: azure-storage-account
-name: Azure Storage Account APIs
+name: Azure Storage Account
 description: >-
   Collection of APIs for Azure Storage Account services including Blob, Queue,
   Table, and File storage, providing highly available, massively scalable,
