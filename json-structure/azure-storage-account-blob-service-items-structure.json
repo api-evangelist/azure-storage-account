@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/azure-storage-account/refs/heads/main/json-structure/azure-storage-account-blob-service-items-structure.json",
+  "description": "BlobServiceItems schema from Azure Storage Account API",
+  "properties": {
+    "value": {
+      "description": "List of blob services returned.",
+      "items": {
+        "$ref": "#/definitions/BlobServiceProperties"
+      },
+      "readOnly": true,
+      "type": "array"
+    }
+  },
+  "type": "object",
+  "name": "BlobServiceItems"
+}

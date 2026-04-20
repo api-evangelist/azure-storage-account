@@ -1,0 +1,255 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "azurestorageaccount": "https://azure.microsoft.com/azure-storage-account/schema/",
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "AccountSasParameters": "azurestorageaccount:AccountSasParameters",
+    "ActiveDirectoryProperties": "azurestorageaccount:ActiveDirectoryProperties",
+    "AzureFilesIdentityBasedAuthentication": "azurestorageaccount:AzureFilesIdentityBasedAuthentication",
+    "BlobRestoreParameters": "azurestorageaccount:BlobRestoreParameters",
+    "BlobRestoreRange": "azurestorageaccount:BlobRestoreRange",
+    "BlobRestoreStatus": "azurestorageaccount:BlobRestoreStatus",
+    "CheckNameAvailabilityResult": "azurestorageaccount:CheckNameAvailabilityResult",
+    "CustomDomain": "azurestorageaccount:CustomDomain",
+    "DateAfterCreation": "azurestorageaccount:DateAfterCreation",
+    "DateAfterModification": "azurestorageaccount:DateAfterModification",
+    "Dimension": "azurestorageaccount:Dimension",
+    "Encryption": "azurestorageaccount:Encryption",
+    "EncryptionService": "azurestorageaccount:EncryptionService",
+    "EncryptionServices": "azurestorageaccount:EncryptionServices",
+    "Endpoints": "azurestorageaccount:Endpoints",
+    "GeoReplicationStats": "azurestorageaccount:GeoReplicationStats",
+    "IPRule": "azurestorageaccount:IPRule",
+    "Identity": "azurestorageaccount:Identity",
+    "KeyVaultProperties": "azurestorageaccount:KeyVaultProperties",
+    "ListAccountSasResponse": "azurestorageaccount:ListAccountSasResponse",
+    "keyToSign": {
+      "@id": "azurestorageaccount:keyToSign",
+      "@type": "xsd:string"
+    },
+    "signedExpiry": {
+      "@id": "azurestorageaccount:signedExpiry",
+      "@type": "xsd:string"
+    },
+    "signedIp": {
+      "@id": "azurestorageaccount:signedIp",
+      "@type": "xsd:string"
+    },
+    "signedPermission": {
+      "@id": "azurestorageaccount:signedPermission",
+      "@type": "xsd:string"
+    },
+    "signedProtocol": {
+      "@id": "azurestorageaccount:signedProtocol",
+      "@type": "xsd:string"
+    },
+    "signedResourceTypes": {
+      "@id": "azurestorageaccount:signedResourceTypes",
+      "@type": "xsd:string"
+    },
+    "signedServices": {
+      "@id": "azurestorageaccount:signedServices",
+      "@type": "xsd:string"
+    },
+    "signedStart": {
+      "@id": "azurestorageaccount:signedStart",
+      "@type": "xsd:string"
+    },
+    "azureStorageSid": {
+      "@id": "azurestorageaccount:azureStorageSid",
+      "@type": "xsd:string"
+    },
+    "domainGuid": {
+      "@id": "azurestorageaccount:domainGuid",
+      "@type": "xsd:string"
+    },
+    "domainName": {
+      "@id": "azurestorageaccount:domainName",
+      "@type": "xsd:string"
+    },
+    "domainSid": {
+      "@id": "azurestorageaccount:domainSid",
+      "@type": "xsd:string"
+    },
+    "forestName": {
+      "@id": "azurestorageaccount:forestName",
+      "@type": "xsd:string"
+    },
+    "netBiosDomainName": {
+      "@id": "azurestorageaccount:netBiosDomainName",
+      "@type": "xsd:string"
+    },
+    "activeDirectoryProperties": {
+      "@id": "azurestorageaccount:activeDirectoryProperties",
+      "@type": "xsd:string"
+    },
+    "directoryServiceOptions": {
+      "@id": "azurestorageaccount:directoryServiceOptions",
+      "@type": "xsd:string"
+    },
+    "blobRanges": {
+      "@id": "azurestorageaccount:blobRanges",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "timeToRestore": {
+      "@id": "azurestorageaccount:timeToRestore",
+      "@type": "xsd:string"
+    },
+    "endRange": {
+      "@id": "azurestorageaccount:endRange",
+      "@type": "xsd:string"
+    },
+    "startRange": {
+      "@id": "azurestorageaccount:startRange",
+      "@type": "xsd:string"
+    },
+    "failureReason": {
+      "@id": "azurestorageaccount:failureReason",
+      "@type": "xsd:string"
+    },
+    "parameters": {
+      "@id": "azurestorageaccount:parameters",
+      "@type": "xsd:string"
+    },
+    "restoreId": {
+      "@id": "azurestorageaccount:restoreId",
+      "@type": "xsd:string"
+    },
+    "status": {
+      "@id": "azurestorageaccount:status",
+      "@type": "xsd:string"
+    },
+    "message": {
+      "@id": "azurestorageaccount:message",
+      "@type": "xsd:string"
+    },
+    "nameAvailable": {
+      "@id": "azurestorageaccount:nameAvailable",
+      "@type": "xsd:boolean"
+    },
+    "reason": {
+      "@id": "azurestorageaccount:reason",
+      "@type": "xsd:string"
+    },
+    "name": "schema:name",
+    "useSubDomainName": {
+      "@id": "azurestorageaccount:useSubDomainName",
+      "@type": "xsd:boolean"
+    },
+    "daysAfterCreationGreaterThan": {
+      "@id": "azurestorageaccount:daysAfterCreationGreaterThan",
+      "@type": "xsd:decimal"
+    },
+    "daysAfterModificationGreaterThan": {
+      "@id": "azurestorageaccount:daysAfterModificationGreaterThan",
+      "@type": "xsd:decimal"
+    },
+    "displayName": {
+      "@id": "azurestorageaccount:displayName",
+      "@type": "xsd:string"
+    },
+    "keySource": {
+      "@id": "azurestorageaccount:keySource",
+      "@type": "xsd:string"
+    },
+    "keyvaultproperties": {
+      "@id": "azurestorageaccount:keyvaultproperties",
+      "@type": "xsd:string"
+    },
+    "services": {
+      "@id": "azurestorageaccount:services",
+      "@type": "xsd:string"
+    },
+    "enabled": {
+      "@id": "azurestorageaccount:enabled",
+      "@type": "xsd:boolean"
+    },
+    "keyType": {
+      "@id": "azurestorageaccount:keyType",
+      "@type": "xsd:string"
+    },
+    "lastEnabledTime": {
+      "@id": "azurestorageaccount:lastEnabledTime",
+      "@type": "xsd:string"
+    },
+    "blob": {
+      "@id": "azurestorageaccount:blob",
+      "@type": "xsd:string"
+    },
+    "file": {
+      "@id": "azurestorageaccount:file",
+      "@type": "xsd:string"
+    },
+    "queue": {
+      "@id": "azurestorageaccount:queue",
+      "@type": "xsd:string"
+    },
+    "table": {
+      "@id": "azurestorageaccount:table",
+      "@type": "xsd:string"
+    },
+    "dfs": {
+      "@id": "azurestorageaccount:dfs",
+      "@type": "xsd:string"
+    },
+    "internetEndpoints": {
+      "@id": "azurestorageaccount:internetEndpoints",
+      "@type": "xsd:string"
+    },
+    "microsoftEndpoints": {
+      "@id": "azurestorageaccount:microsoftEndpoints",
+      "@type": "xsd:string"
+    },
+    "web": {
+      "@id": "azurestorageaccount:web",
+      "@type": "xsd:string"
+    },
+    "canFailover": {
+      "@id": "azurestorageaccount:canFailover",
+      "@type": "xsd:boolean"
+    },
+    "lastSyncTime": {
+      "@id": "azurestorageaccount:lastSyncTime",
+      "@type": "xsd:string"
+    },
+    "action": {
+      "@id": "azurestorageaccount:action",
+      "@type": "xsd:string"
+    },
+    "value": {
+      "@id": "azurestorageaccount:value",
+      "@type": "xsd:string"
+    },
+    "principalId": {
+      "@id": "azurestorageaccount:principalId",
+      "@type": "xsd:string"
+    },
+    "tenantId": {
+      "@id": "azurestorageaccount:tenantId",
+      "@type": "xsd:string"
+    },
+    "type": {
+      "@id": "azurestorageaccount:type",
+      "@type": "xsd:string"
+    },
+    "keyname": {
+      "@id": "azurestorageaccount:keyname",
+      "@type": "xsd:string"
+    },
+    "keyvaulturi": {
+      "@id": "azurestorageaccount:keyvaulturi",
+      "@type": "xsd:string"
+    },
+    "keyversion": {
+      "@id": "azurestorageaccount:keyversion",
+      "@type": "xsd:string"
+    },
+    "accountSasToken": {
+      "@id": "azurestorageaccount:accountSasToken",
+      "@type": "xsd:string"
+    }
+  }
+}

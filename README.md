@@ -1,109 +1,89 @@
-# Azure Storage Account APIs (azure-storage-account)
-Collection of APIs for Azure Storage Account services including Blob, Queue, Table, and File storage
+# Azure Storage Account (azure-storage-account)
+Collection of APIs for Azure Storage Account services including Blob, Queue, Table, and File storage providing highly available and scalable cloud storage.
 
 **URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/azure-storage-account/refs/heads/main/apis.yml)
 
+**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
+
 ## Tags:
 
- - Storage, Cloud Storage, Azure, Microsoft, Blob Storage, File Storage, Queue Storage, Table Storage
+ - Azure, Blob Storage, Cloud Storage, File Storage, Microsoft, Storage
 
 ## Timestamps
 
-- **Created:** 2024-01-01 
-- **Modified:** 2024-01-01 
+- **Created:** 2024-01-01
+- **Modified:** 2026-04-19
 
 ## APIs
 
-### Azure Blob Storage API
-REST API for storing and managing unstructured data as blobs
+### Azure Storage Account
+Collection of APIs for Azure Storage Account services including Blob, Queue, Table, and File storage providing highly available and scalable cloud storage.
 
-**Human URL:** [https://learn.microsoft.com/en-us/rest/api/storageservices/blob-service-rest-api](https://learn.microsoft.com/en-us/rest/api/storageservices/blob-service-rest-api)
-
-
-#### Tags:
-
- - Blob Storage, Object Storage, Unstructured Data
-
-#### Properties
-
-- [Documentation](https://learn.microsoft.com/en-us/azure/storage/blobs/)
-- [OpenAPI](https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/storage/data-plane/Microsoft.BlobStorage/stable/2021-12-02/blob.json)
-- [Pricing](https://azure.microsoft.com/en-us/pricing/details/storage/blobs/)
-- [Authentication](https://learn.microsoft.com/en-us/rest/api/storageservices/authorize-requests-to-azure-storage)
-
-### Azure Queue Storage API
-REST API for storing and retrieving messages in queues
-
-**Human URL:** [https://learn.microsoft.com/en-us/rest/api/storageservices/queue-service-rest-api](https://learn.microsoft.com/en-us/rest/api/storageservices/queue-service-rest-api)
-
+**Human URL:** [https://learn.microsoft.com/en-us/azure/storage/](https://learn.microsoft.com/en-us/azure/storage/)
 
 #### Tags:
 
- - Queue Storage, Message Queue, Asynchronous Processing
+ - Blob Storage, File Storage, Queue Storage
 
 #### Properties
 
-- [Documentation](https://learn.microsoft.com/en-us/azure/storage/queues/)
-- [OpenAPI](https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/storage/data-plane/Microsoft.QueueStorage/stable/2018-03-28/queue.json)
-- [Pricing](https://azure.microsoft.com/en-us/pricing/details/storage/queues/)
-
-### Azure Table Storage API
-REST API for storing structured NoSQL data in the cloud
-
-**Human URL:** [https://learn.microsoft.com/en-us/rest/api/storageservices/table-service-rest-api](https://learn.microsoft.com/en-us/rest/api/storageservices/table-service-rest-api)
-
-
-#### Tags:
-
- - Table Storage, NoSQL, Structured Data
-
-#### Properties
-
-- [Documentation](https://learn.microsoft.com/en-us/azure/storage/tables/)
-- [OpenAPI](https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/storage/data-plane/Microsoft.TableStorage/stable/2019-02-02/table.json)
-- [Pricing](https://azure.microsoft.com/en-us/pricing/details/storage/tables/)
-
-### Azure File Storage API
-REST API for managed file shares using SMB and NFS protocols
-
-**Human URL:** [https://learn.microsoft.com/en-us/rest/api/storageservices/file-service-rest-api](https://learn.microsoft.com/en-us/rest/api/storageservices/file-service-rest-api)
-
-
-#### Tags:
-
- - File Storage, File Shares, SMB, NFS
-
-#### Properties
-
-- [Documentation](https://learn.microsoft.com/en-us/azure/storage/files/)
-- [OpenAPI](https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/storage/data-plane/Microsoft.FileStorage/stable/2021-12-02/file.json)
-- [Pricing](https://azure.microsoft.com/en-us/pricing/details/storage/files/)
-
-### Azure Storage Account Management API
-Azure Resource Manager API for managing storage accounts
-
-**Human URL:** [https://learn.microsoft.com/en-us/rest/api/storagerp/](https://learn.microsoft.com/en-us/rest/api/storagerp/)
-
-
-#### Tags:
-
- - Management, ARM, Resource Manager
-
-#### Properties
-
-- [Documentation](https://learn.microsoft.com/en-us/rest/api/storagerp/)
-- [OpenAPI](https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/storage/resource-manager/Microsoft.Storage/stable/2023-01-01/storage.json)
+- [Documentation](https://learn.microsoft.com/en-us/azure/storage/)
+- [OpenAPI](openapi/azure-storage-account-management-openapi.yaml)
+- [OpenAPI](openapi/azure-storage-account-blob-openapi.yaml)
 
 ## Common Properties
 
-- [Portal](https://portal.azure.com)
-- [SDKs](https://azure.microsoft.com/en-us/downloads/)
-- [Status](https://status.azure.com/)
-- [Support](https://azure.microsoft.com/en-us/support/)
-- [Terms of Service](https://azure.microsoft.com/en-us/support/legal/)
+
+## Artifacts
+
+Machine-readable API specifications organized by format.
+
+### OpenAPI
+
+- [Management](openapi/azure-storage-account-management-openapi.yaml)
+- [Blob](openapi/azure-storage-account-blob-openapi.yaml)
+
+### JSON Schema
+
+- [Encryption Service](json-schema/azure-storage-account-encryption-service-schema.json)
+- [Management Policy Definition](json-schema/azure-storage-account-management-policy-definition-schema.json)
+- [Management Policy Base Blob](json-schema/azure-storage-account-management-policy-base-blob-schema.json)
+- [Lease Container Response](json-schema/azure-storage-account-lease-container-response-schema.json)
+- [Immutability Policy Property](json-schema/azure-storage-account-immutability-policy-property-schema.json)
+- [Container Properties](json-schema/azure-storage-account-container-properties-schema.json)
+- [Custom Domain](json-schema/azure-storage-account-custom-domain-schema.json)
+- [Date After Modification](json-schema/azure-storage-account-date-after-modification-schema.json)
+- [Ip Rule](json-schema/azure-storage-account-ip-rule-schema.json)
+- [Key Vault Properties](json-schema/azure-storage-account-key-vault-properties-schema.json)
+
+### JSON-LD
+
+- [Azure Storage Account Context](json-ld/azure-storage-account-context.jsonld)
+
+## Capabilities
+
+Naftiko capabilities organized as shared per-API definitions composed into customer-facing workflows.
+
+### Shared Per-API Definitions
+
+- [Azure Storage Account](capabilities/shared/azure-storage-account.yaml)
+
+### Workflow Capabilities
+
+| Workflow | APIs Combined | Tools | Persona |
+|----------|--------------|-------|----------|
+| [Azure Storage Account Management](capabilities/azure-storage-account-management.yaml) | Azure Storage Account | 5 | Cloud Engineer |
+
+## Vocabulary
+
+- [Azure Storage Account Vocabulary](vocabulary/azure-storage-account-vocabulary.yaml)
+
+## Rules
+
+- [Azure Storage Account Spectral Rules](rules/azure-storage-account-spectral-rules.yml) — 15 rules enforcing Azure Storage Account API conventions
 
 ## Maintainers
 
-**FN:** Microsoft Azure
+**FN:** Kin Lane
 
-**Email:** azurestorage@microsoft.com
+**Email:** kin@apievangelist.com
