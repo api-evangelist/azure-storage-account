@@ -4,177 +4,255 @@ schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main
 provider: Azure Storage Account
 providerId: azure-storage-account
 created: '2026-05-04'
-modified: '2026-05-04'
+modified: '2026-05-05'
+reconciled: true
 tags:
-  - Azure
-  - Blob Storage
-  - Cloud Storage
-  - File Storage
-  - Microsoft
   - Storage
-description: Machine-readable plans and pricing scaffold for this API provider. Conforms to the API Commons
-  Plans schema. Tier limits and prices are scaffold defaults; replace with provider-published values.
+  - Blob
+  - Files
+  - Queues
+  - Tables
+  - Archive
+description: Azure Storage charges per data service (Blob, Files, Queues, Tables, Disks) on multiple
+  axes - capacity (per GB-month, varying by tier and redundancy), transactions (per 10,000 ops by service
+  / tier), egress (per GB; same-region same-AZ free), and feature add-ons such as object replication,
+  change feed, and reservations. Performance tier (Standard vs Premium) and access tier (Hot, Cool, Cold,
+  Archive) drive both capacity and transaction rates. Reserved capacity (1-yr / 3-yr) provides up to
+  ~38% discount on capacity for predictable workloads.
+sources:
+  - https://azure.microsoft.com/en-us/pricing/details/storage/
+  - https://azure.microsoft.com/en-us/pricing/details/storage/blobs/
+  - https://learn.microsoft.com/en-us/azure/storage/common/scalability-targets-standard-account
 plans:
-  - id: azure-storage-account-free
-    name: Free
-    type: freemium
-    description: Free entry tier for the Azure Storage Account API surface. Intended for evaluation, prototyping,
-      and low-volume integrations. Real limits and pricing must be reconciled with the provider's published
-      plan documentation.
+  - id: azure-storage-account-standard-blob
+    name: Standard Block Blob Storage
+    type: usage-based
+    description: General-purpose v2 / Blob Storage with Hot, Cool, Cold, and Archive access tiers and
+      LRS/ZRS/GRS/RA-GRS/GZRS redundancy options.
     entries:
-      - label: API Requests
-        description: Monthly API request quota across all included endpoints
-        name: api_requests
-        type: quota
-        metric: requests
-        limit: 1000
-        timeFrame: month
-        geo: global
-        domains:
-          - https://{account}.blob.core.windows.net
-          - https://{account}.queue.core.windows.net
-          - https://{account}.table.core.windows.net
-          - https://{account}.file.core.windows.net
-        unit: 1
-        price: '0.00'
-        userMultiplied: false
-      - label: Rate Limit
-        description: Maximum requests per minute on the free tier
-        name: rate_limit
-        type: rate
-        metric: requests_per_minute
-        limit: 10
-        timeFrame: minute
-        geo: global
-        domains:
-          - https://{account}.blob.core.windows.net
-          - https://{account}.queue.core.windows.net
-          - https://{account}.table.core.windows.net
-          - https://{account}.file.core.windows.net
-        unit: 1
-        price: '0.00'
-        userMultiplied: false
-    elements:
-      - name: Public Documentation
-      - name: Community Support
-      - name: Sandbox Access
-      - name: Azure Blob Storage API
-      - name: Azure Queue Storage API
-      - name: Azure Table Storage API
-      - name: Azure File Storage API
-  - id: azure-storage-account-pro
-    name: Professional
-    type: paid
-    description: Production tier for Azure Storage Account. Provides higher quotas, priority support,
-      and access to the broader API portfolio. Pricing placeholder; align with the provider's pricing
-      page.
-    entries:
-      - label: API Requests
-        description: Monthly API request quota
-        name: api_requests
-        type: quota
-        metric: requests
-        limit: 100000
-        timeFrame: month
-        geo: global
-        domains:
-          - https://{account}.blob.core.windows.net
-          - https://{account}.queue.core.windows.net
-          - https://{account}.table.core.windows.net
-          - https://{account}.file.core.windows.net
-        unit: 1
-        price: TBD
-        userMultiplied: false
-      - label: Rate Limit
-        description: Maximum requests per minute on the professional tier
-        name: rate_limit
-        type: rate
-        metric: requests_per_minute
-        limit: 100
-        timeFrame: minute
-        geo: global
-        domains:
-          - https://{account}.blob.core.windows.net
-          - https://{account}.queue.core.windows.net
-          - https://{account}.table.core.windows.net
-          - https://{account}.file.core.windows.net
-        unit: 1
-        price: '0.00'
-        userMultiplied: false
-      - label: Overage
-        description: Per-request price after monthly quota is exceeded
-        name: overage
+      - label: Capacity (Hot)
+        name: capacity_hot
         type: metered
-        metric: requests
+        metric: GB-month
         limit: -1
         timeFrame: month
         geo: global
-        domains:
-          - https://{account}.blob.core.windows.net
-          - https://{account}.queue.core.windows.net
-          - https://{account}.table.core.windows.net
-          - https://{account}.file.core.windows.net
-        unit: 1000
-        price: TBD
+        unit: 1
+        price: see Azure Blob Storage pricing page
         userMultiplied: false
-    elements:
-      - name: All Production Endpoints
-      - name: Email Support
-      - name: SLA Targets
-      - name: Webhook Subscriptions
-      - name: Azure Blob Storage API
-      - name: Azure Queue Storage API
-      - name: Azure Table Storage API
-      - name: Azure File Storage API
-  - id: azure-storage-account-enterprise
-    name: Enterprise
-    type: enterprise
-    description: Custom-negotiated tier for Azure Storage Account. Includes dedicated capacity, contractual
-      SLAs, security review, data residency options, and named technical account management.
-    entries:
-      - label: API Requests
-        description: Negotiated request volume; -1 indicates uncapped subject to fair use
-        name: api_requests
-        type: quota
-        metric: requests
+      - label: Capacity (Cool)
+        name: capacity_cool
+        type: metered
+        metric: GB-month
         limit: -1
         timeFrame: month
-        geo: configurable
-        domains:
-          - https://{account}.blob.core.windows.net
-          - https://{account}.queue.core.windows.net
-          - https://{account}.table.core.windows.net
-          - https://{account}.file.core.windows.net
+        geo: global
         unit: 1
-        price: custom
+        price: see Azure Blob Storage pricing page
         userMultiplied: false
-      - label: Rate Limit
-        description: Negotiated burst and steady-state rate
-        name: rate_limit
-        type: rate
-        metric: requests_per_minute
-        limit: 1000
-        timeFrame: minute
-        geo: configurable
-        domains:
-          - https://{account}.blob.core.windows.net
-          - https://{account}.queue.core.windows.net
-          - https://{account}.table.core.windows.net
-          - https://{account}.file.core.windows.net
+      - label: Capacity (Cold)
+        name: capacity_cold
+        type: metered
+        metric: GB-month
+        limit: -1
+        timeFrame: month
+        geo: global
         unit: 1
-        price: custom
+        price: see Azure Blob Storage pricing page
+        userMultiplied: false
+      - label: Capacity (Archive)
+        name: capacity_archive
+        type: metered
+        metric: GB-month
+        limit: -1
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: see Azure Blob Storage pricing page
+        userMultiplied: false
+      - label: Read transactions
+        name: tx_read
+        type: metered
+        metric: operation
+        limit: -1
+        timeFrame: usage
+        geo: global
+        unit: 10000
+        price: see Azure Blob Storage pricing page
+        userMultiplied: false
+      - label: Write transactions
+        name: tx_write
+        type: metered
+        metric: operation
+        limit: -1
+        timeFrame: usage
+        geo: global
+        unit: 10000
+        price: see Azure Blob Storage pricing page
+        userMultiplied: false
+      - label: Data retrieval (Cool/Cold/Archive)
+        name: retrieval
+        type: metered
+        metric: GB
+        limit: -1
+        timeFrame: usage
+        geo: global
+        unit: 1
+        price: see Azure Blob Storage pricing page
+        userMultiplied: false
+      - label: Egress (cross-region / internet)
+        name: egress
+        type: metered
+        metric: GB
+        limit: -1
+        timeFrame: usage
+        geo: global
+        unit: 1
+        price: see Azure bandwidth pricing
         userMultiplied: false
     elements:
-      - name: Unlimited / Negotiated Volume
-      - name: 24/7 Dedicated Support
-      - name: Contractual SLA
-      - name: Security & Compliance Review
-      - name: Dedicated Account Manager
-      - name: Custom Data Residency
-      - name: Azure Blob Storage API
-      - name: Azure Queue Storage API
-      - name: Azure Table Storage API
-      - name: Azure File Storage API
+      - name: Hot / Cool / Cold / Archive tiers
+      - name: LRS, ZRS, GRS, RA-GRS, GZRS redundancy
+      - name: Lifecycle policies
+      - name: Object replication
+  - id: azure-storage-account-premium-blob
+    name: Premium Block Blob Storage
+    type: usage-based
+    description: SSD-backed block blob storage for low-latency / high-IOPS workloads. Higher capacity
+      cost; lower per-transaction cost.
+    entries:
+      - label: Premium block blob capacity
+        name: premium_capacity
+        type: metered
+        metric: GB-month
+        limit: -1
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: see Azure Blob Storage pricing page
+        userMultiplied: false
+      - label: Premium block blob transactions
+        name: premium_tx
+        type: metered
+        metric: operation
+        limit: -1
+        timeFrame: usage
+        geo: global
+        unit: 10000
+        price: see Azure Blob Storage pricing page
+        userMultiplied: false
+    elements:
+      - name: SSD-backed performance
+      - name: LRS / ZRS only
+      - name: Lower latency for object workloads
+  - id: azure-storage-account-files
+    name: Azure Files
+    type: usage-based
+    description: Managed SMB / NFS file shares. Standard (HDD) and Premium (SSD) performance tiers; transaction-optimized
+      / Hot / Cool sub-tiers on Standard.
+    entries:
+      - label: Files capacity
+        name: files_capacity
+        type: metered
+        metric: GB-month
+        limit: -1
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: see Azure Files pricing page
+        userMultiplied: false
+      - label: Files transactions
+        name: files_tx
+        type: metered
+        metric: operation
+        limit: -1
+        timeFrame: usage
+        geo: global
+        unit: 10000
+        price: see Azure Files pricing page
+        userMultiplied: false
+    elements:
+      - name: SMB 3.x / NFS 4.1
+      - name: Transaction-optimized / Hot / Cool / Premium sub-tiers
+      - name: Snapshots
+  - id: azure-storage-account-queues-tables
+    name: Queue and Table Storage
+    type: usage-based
+    description: Per-message queue / per-entity table storage. Capacity and per-10,000-transaction pricing.
+    entries:
+      - label: Queue capacity
+        name: queue_capacity
+        type: metered
+        metric: GB-month
+        limit: -1
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: see Azure Storage pricing page
+        userMultiplied: false
+      - label: Queue transactions
+        name: queue_tx
+        type: metered
+        metric: operation
+        limit: -1
+        timeFrame: usage
+        geo: global
+        unit: 10000
+        price: see Azure Storage pricing page
+        userMultiplied: false
+      - label: Table capacity
+        name: table_capacity
+        type: metered
+        metric: GB-month
+        limit: -1
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: see Azure Storage pricing page
+        userMultiplied: false
+      - label: Table transactions
+        name: table_tx
+        type: metered
+        metric: operation
+        limit: -1
+        timeFrame: usage
+        geo: global
+        unit: 10000
+        price: see Azure Storage pricing page
+        userMultiplied: false
+    elements:
+      - name: SLA-backed message queue
+      - name: NoSQL key-attribute table store
+  - id: azure-storage-account-reservations
+    name: Reserved Capacity
+    type: subscription
+    description: 1-year or 3-year reserved capacity commitment for Block Blob and Azure Files. Up to
+      ~38% capacity discount.
+    entries:
+      - label: 1-year reservation
+        name: reservation_1y
+        type: subscription
+        metric: GB
+        limit: -1
+        timeFrame: year
+        geo: global
+        unit: 1
+        price: discount up to ~38% off PAYG capacity
+        userMultiplied: false
+      - label: 3-year reservation
+        name: reservation_3y
+        type: subscription
+        metric: GB
+        limit: -1
+        timeFrame: year
+        geo: global
+        unit: 1
+        price: discount higher than 1-year
+        userMultiplied: false
+    elements:
+      - name: Block Blob and Azure Files coverage
+      - name: Capacity-only discount (transactions still PAYG)
+      - name: Account-scoped or shared-scope
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
