@@ -90,13 +90,13 @@ common:
   url: https://learn.microsoft.com/en-us/azure/storage/
 - type: SDKs
   url: https://azure.microsoft.com/en-us/downloads/
-- type: Status
+- type: StatusPage
   url: https://status.azure.com/
 - type: Support
   url: https://azure.microsoft.com/en-us/support/
-- type: Terms of Service
+- type: TermsOfService
   url: https://azure.microsoft.com/en-us/support/legal/
-- type: Privacy Policy
+- type: PrivacyPolicy
   url: https://privacy.microsoft.com/en-us/privacystatement
 - type: SpectralRules
   url: https://raw.githubusercontent.com/api-evangelist/azure-storage-account/refs/heads/main/rules/azure-storage-account-spectral-rules.yml
