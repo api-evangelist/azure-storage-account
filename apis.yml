@@ -1,9 +1,7 @@
 aid: azure-storage-account
 name: Azure Storage Account
-description: >-
-  Collection of APIs for Azure Storage Account services including Blob, Queue,
-  Table, and File storage, providing highly available, massively scalable,
-  durable, and secure storage for a variety of data objects.
+description: Collection of APIs for Azure Storage Account services including Blob, Queue, Table, and File storage, providing
+  highly available, massively scalable, durable, and secure storage for a variety of data objects.
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
@@ -13,10 +11,9 @@ tags:
 - File Storage
 - Microsoft
 - Storage
-url: >-
-  https://raw.githubusercontent.com/api-evangelist/azure-storage-account/refs/heads/main/apis.yml
+url: https://raw.githubusercontent.com/api-evangelist/azure-storage-account/refs/heads/main/apis.yml
 created: '2024-01-01'
-modified: '2026-04-19'
+modified: '2026-05-19'
 specificationVersion: '0.19'
 apis:
 - aid: azure-storage-account:azure-blob-storage-api
@@ -35,6 +32,10 @@ apis:
     url: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/storage/data-plane/Microsoft.BlobStorage/stable/2021-12-02/blob.json
   - type: Authentication
     url: https://learn.microsoft.com/en-us/rest/api/storageservices/authorize-requests-to-azure-storage
+  - type: NaftikoCapability
+    url: capabilities/blob-blobcontainers.yaml
+  - type: NaftikoCapability
+    url: capabilities/blob-blobservice.yaml
 - aid: azure-storage-account:azure-queue-storage-api
   name: Azure Queue Storage API
   description: REST API for storing and retrieving messages in queues.
@@ -51,6 +52,20 @@ apis:
     url: https://raw.githubusercontent.com/api-evangelist/azure-storage-account/refs/heads/main/openapi/azure-storage-account-management-openapi.yaml
   - type: OpenAPI
     url: https://raw.githubusercontent.com/api-evangelist/azure-storage-account/refs/heads/main/openapi/azure-storage-account-blob-openapi.yaml
+  - type: NaftikoCapability
+    url: capabilities/management-locationusage.yaml
+  - type: NaftikoCapability
+    url: capabilities/management-managementpolicies.yaml
+  - type: NaftikoCapability
+    url: capabilities/management-operations.yaml
+  - type: NaftikoCapability
+    url: capabilities/management-privateendpointconnections.yaml
+  - type: NaftikoCapability
+    url: capabilities/management-privatelinkresources.yaml
+  - type: NaftikoCapability
+    url: capabilities/management-skus.yaml
+  - type: NaftikoCapability
+    url: capabilities/management-storageaccounts.yaml
 - aid: azure-storage-account:azure-table-storage-api
   name: Azure Table Storage API
   description: REST API for storing structured NoSQL data in the cloud.
@@ -104,10 +119,6 @@ common:
   url: https://raw.githubusercontent.com/api-evangelist/azure-storage-account/refs/heads/main/vocabulary/azure-storage-account-vocabulary.yaml
 - type: JSONLD
   url: https://raw.githubusercontent.com/api-evangelist/azure-storage-account/refs/heads/main/json-ld/azure-storage-account-context.jsonld
-- type: NaftikoCapability
-  url: https://raw.githubusercontent.com/api-evangelist/azure-storage-account/refs/heads/main/capabilities/azure-storage-account-management.yaml
-- type: NaftikoCapability
-  url: https://raw.githubusercontent.com/api-evangelist/azure-storage-account/refs/heads/main/capabilities/shared/azure-storage-account.yaml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
