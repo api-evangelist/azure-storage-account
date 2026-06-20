@@ -3,7 +3,7 @@ name: Azure Storage Account
 description: Collection of APIs for Azure Storage Account services including Blob, Queue, Table, and File storage, providing
   highly available, massively scalable, durable, and secure storage for a variety of data objects.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
 - Azure
 - Blob Storage
