@@ -32,9 +32,9 @@ apis:
     url: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/storage/data-plane/Microsoft.BlobStorage/stable/2021-12-02/blob.json
   - type: Authentication
     url: https://learn.microsoft.com/en-us/rest/api/storageservices/authorize-requests-to-azure-storage
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/blob-blobcontainers.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/blob-blobservice.yaml
 - aid: azure-storage-account:azure-queue-storage-api
   name: Azure Queue Storage API
@@ -52,19 +52,19 @@ apis:
     url: https://raw.githubusercontent.com/api-evangelist/azure-storage-account/refs/heads/main/openapi/azure-storage-account-management-openapi.yaml
   - type: OpenAPI
     url: https://raw.githubusercontent.com/api-evangelist/azure-storage-account/refs/heads/main/openapi/azure-storage-account-blob-openapi.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/management-locationusage.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/management-managementpolicies.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/management-operations.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/management-privateendpointconnections.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/management-privatelinkresources.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/management-skus.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/management-storageaccounts.yaml
 - aid: azure-storage-account:azure-table-storage-api
   name: Azure Table Storage API
