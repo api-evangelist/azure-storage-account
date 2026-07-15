@@ -99,6 +99,8 @@ apis:
   - type: OpenAPI
     url: https://raw.githubusercontent.com/api-evangelist/azure-storage-account/refs/heads/main/openapi/azure-storage-account-blob-openapi.yaml
 common:
+- type: AgenticAccess
+  url: agentic-access/azure-storage-account-agentic-access.yml
 - type: DomainSecurity
   url: security/azure-storage-account-domain-security.yml
 - type: Authentication
