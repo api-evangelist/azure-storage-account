@@ -1,0 +1,642 @@
+{
+  "info": {
+    "_postman_id": "6fe8e8ba-832b-4f0b-804c-c2ce8246c755",
+    "name": "StorageManagementClient BlobContainers ManagementPolicies API",
+    "description": "The Azure Storage Management API.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T10:53:29.000Z",
+    "updatedAt": "2026-07-28T10:53:29.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-6fe8e8ba-832b-4f0b-804c-c2ce8246c755"
+  },
+  "item": [
+    {
+      "name": "subscriptions",
+      "item": [
+        {
+          "name": "{subscriptionId}",
+          "item": [
+            {
+              "name": "resourceGroups",
+              "item": [
+                {
+                  "name": "{resourceGroupName}",
+                  "item": [
+                    {
+                      "name": "providers",
+                      "item": [
+                        {
+                          "name": "Microsoft.Storage",
+                          "item": [
+                            {
+                              "name": "storageAccounts",
+                              "item": [
+                                {
+                                  "name": "{accountName}",
+                                  "item": [
+                                    {
+                                      "name": "managementPolicies",
+                                      "item": [
+                                        {
+                                          "name": "{managementPolicyName}",
+                                          "item": [
+                                            {
+                                              "name": "Azure Storage Account Management Policies_ Delete",
+                                              "id": "a0eba678-11bf-424e-9567-370cba9397fc",
+                                              "protocolProfileBehavior": {
+                                                "disableBodyPruning": true
+                                              },
+                                              "request": {
+                                                "method": "DELETE",
+                                                "header": [],
+                                                "url": {
+                                                  "raw": "{{baseUrl}}/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.Storage/storageAccounts/:accountName/managementPolicies/:managementPolicyName?api-version=<string>",
+                                                  "host": [
+                                                    "{{baseUrl}}"
+                                                  ],
+                                                  "path": [
+                                                    "subscriptions",
+                                                    ":subscriptionId",
+                                                    "resourceGroups",
+                                                    ":resourceGroupName",
+                                                    "providers",
+                                                    "Microsoft.Storage",
+                                                    "storageAccounts",
+                                                    ":accountName",
+                                                    "managementPolicies",
+                                                    ":managementPolicyName"
+                                                  ],
+                                                  "query": [
+                                                    {
+                                                      "description": "(Required) The API version to use for this operation.",
+                                                      "key": "api-version",
+                                                      "value": "<string>"
+                                                    }
+                                                  ],
+                                                  "variable": [
+                                                    {
+                                                      "id": "bdcb6f89-fa5b-44a6-a59e-79ed28f568b1",
+                                                      "key": "subscriptionId",
+                                                      "value": "<string>",
+                                                      "description": "(Required) The ID of the target subscription."
+                                                    },
+                                                    {
+                                                      "id": "2ab0905a-2624-400b-8acc-52ce3496a149",
+                                                      "key": "resourceGroupName",
+                                                      "value": "yWF",
+                                                      "description": "(Required) The name of the resource group within the user's subscription. The name is case insensitive."
+                                                    },
+                                                    {
+                                                      "id": "1de9f840-15f8-40d4-839f-31539e7aa8a1",
+                                                      "key": "accountName",
+                                                      "value": "<string>",
+                                                      "description": "(Required) The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only."
+                                                    },
+                                                    {
+                                                      "id": "2cc2c79c-c2f3-48e4-9f91-4714a70365ef",
+                                                      "key": "managementPolicyName",
+                                                      "value": "default",
+                                                      "description": "(Required) The name of the Storage Account Management Policy. It should always be 'default'"
+                                                    }
+                                                  ]
+                                                },
+                                                "description": "Deletes the managementpolicy associated with the specified storage account."
+                                              },
+                                              "response": [
+                                                {
+                                                  "id": "7d87f74d-400e-4eaa-8c9e-d7503ed4ab35",
+                                                  "name": "OK -- Delete the managementpolicy successfully.",
+                                                  "originalRequest": {
+                                                    "method": "DELETE",
+                                                    "header": [
+                                                      {
+                                                        "description": "Added as a part of security scheme: oauth2",
+                                                        "key": "Authorization",
+                                                        "value": "<token>"
+                                                      }
+                                                    ],
+                                                    "url": {
+                                                      "raw": "{{baseUrl}}/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.Storage/storageAccounts/:accountName/managementPolicies/:managementPolicyName?api-version=<string>",
+                                                      "host": [
+                                                        "{{baseUrl}}"
+                                                      ],
+                                                      "path": [
+                                                        "subscriptions",
+                                                        ":subscriptionId",
+                                                        "resourceGroups",
+                                                        ":resourceGroupName",
+                                                        "providers",
+                                                        "Microsoft.Storage",
+                                                        "storageAccounts",
+                                                        ":accountName",
+                                                        "managementPolicies",
+                                                        ":managementPolicyName"
+                                                      ],
+                                                      "query": [
+                                                        {
+                                                          "description": "(Required) The API version to use for this operation.",
+                                                          "key": "api-version",
+                                                          "value": "<string>"
+                                                        }
+                                                      ],
+                                                      "variable": [
+                                                        {
+                                                          "key": "subscriptionId"
+                                                        },
+                                                        {
+                                                          "key": "resourceGroupName"
+                                                        },
+                                                        {
+                                                          "key": "accountName"
+                                                        },
+                                                        {
+                                                          "key": "managementPolicyName"
+                                                        }
+                                                      ]
+                                                    }
+                                                  },
+                                                  "status": "OK",
+                                                  "code": 200,
+                                                  "_postman_previewlanguage": "text",
+                                                  "header": [],
+                                                  "cookie": [],
+                                                  "responseTime": null,
+                                                  "body": null,
+                                                  "createdAt": "2026-07-28T10:53:30.000Z",
+                                                  "updatedAt": "2026-07-28T10:53:30.000Z",
+                                                  "uid": "35240-7d87f74d-400e-4eaa-8c9e-d7503ed4ab35"
+                                                },
+                                                {
+                                                  "id": "ffc9c0f7-b43f-4f0b-b4ee-453f137cff8a",
+                                                  "name": "No Content -- The managementpolicy does not exist.",
+                                                  "originalRequest": {
+                                                    "method": "DELETE",
+                                                    "header": [
+                                                      {
+                                                        "description": "Added as a part of security scheme: oauth2",
+                                                        "key": "Authorization",
+                                                        "value": "<token>"
+                                                      }
+                                                    ],
+                                                    "url": {
+                                                      "raw": "{{baseUrl}}/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.Storage/storageAccounts/:accountName/managementPolicies/:managementPolicyName?api-version=<string>",
+                                                      "host": [
+                                                        "{{baseUrl}}"
+                                                      ],
+                                                      "path": [
+                                                        "subscriptions",
+                                                        ":subscriptionId",
+                                                        "resourceGroups",
+                                                        ":resourceGroupName",
+                                                        "providers",
+                                                        "Microsoft.Storage",
+                                                        "storageAccounts",
+                                                        ":accountName",
+                                                        "managementPolicies",
+                                                        ":managementPolicyName"
+                                                      ],
+                                                      "query": [
+                                                        {
+                                                          "description": "(Required) The API version to use for this operation.",
+                                                          "key": "api-version",
+                                                          "value": "<string>"
+                                                        }
+                                                      ],
+                                                      "variable": [
+                                                        {
+                                                          "key": "subscriptionId"
+                                                        },
+                                                        {
+                                                          "key": "resourceGroupName"
+                                                        },
+                                                        {
+                                                          "key": "accountName"
+                                                        },
+                                                        {
+                                                          "key": "managementPolicyName"
+                                                        }
+                                                      ]
+                                                    }
+                                                  },
+                                                  "status": "No Content",
+                                                  "code": 204,
+                                                  "_postman_previewlanguage": "text",
+                                                  "header": [],
+                                                  "cookie": [],
+                                                  "responseTime": null,
+                                                  "body": null,
+                                                  "createdAt": "2026-07-28T10:53:30.000Z",
+                                                  "updatedAt": "2026-07-28T10:53:30.000Z",
+                                                  "uid": "35240-ffc9c0f7-b43f-4f0b-b4ee-453f137cff8a"
+                                                }
+                                              ],
+                                              "createdAt": "2026-07-28T10:53:30.000Z",
+                                              "updatedAt": "2026-07-28T10:53:30.000Z",
+                                              "uid": "35240-a0eba678-11bf-424e-9567-370cba9397fc"
+                                            },
+                                            {
+                                              "name": "Azure Storage Account Management Policies_ Get",
+                                              "id": "3c8bbfde-69c4-425a-a3d9-1188df227596",
+                                              "protocolProfileBehavior": {
+                                                "disableBodyPruning": true
+                                              },
+                                              "request": {
+                                                "method": "GET",
+                                                "header": [
+                                                  {
+                                                    "key": "Accept",
+                                                    "value": "application/json"
+                                                  }
+                                                ],
+                                                "url": {
+                                                  "raw": "{{baseUrl}}/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.Storage/storageAccounts/:accountName/managementPolicies/:managementPolicyName?api-version=<string>",
+                                                  "host": [
+                                                    "{{baseUrl}}"
+                                                  ],
+                                                  "path": [
+                                                    "subscriptions",
+                                                    ":subscriptionId",
+                                                    "resourceGroups",
+                                                    ":resourceGroupName",
+                                                    "providers",
+                                                    "Microsoft.Storage",
+                                                    "storageAccounts",
+                                                    ":accountName",
+                                                    "managementPolicies",
+                                                    ":managementPolicyName"
+                                                  ],
+                                                  "query": [
+                                                    {
+                                                      "description": "(Required) The API version to use for this operation.",
+                                                      "key": "api-version",
+                                                      "value": "<string>"
+                                                    }
+                                                  ],
+                                                  "variable": [
+                                                    {
+                                                      "id": "0b8f4732-9a61-441f-9625-a9b72a6da355",
+                                                      "key": "subscriptionId",
+                                                      "value": "<string>",
+                                                      "description": "(Required) The ID of the target subscription."
+                                                    },
+                                                    {
+                                                      "id": "5d72fbec-d478-457c-8e25-c7c088ddd4e2",
+                                                      "key": "resourceGroupName",
+                                                      "value": "yWF",
+                                                      "description": "(Required) The name of the resource group within the user's subscription. The name is case insensitive."
+                                                    },
+                                                    {
+                                                      "id": "676a596a-e972-41cb-a000-7ad4f7e0c1ea",
+                                                      "key": "accountName",
+                                                      "value": "<string>",
+                                                      "description": "(Required) The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only."
+                                                    },
+                                                    {
+                                                      "id": "04820e1f-d238-4af3-adca-df7a29038c85",
+                                                      "key": "managementPolicyName",
+                                                      "value": "default",
+                                                      "description": "(Required) The name of the Storage Account Management Policy. It should always be 'default'"
+                                                    }
+                                                  ]
+                                                },
+                                                "description": "Gets the managementpolicy associated with the specified storage account."
+                                              },
+                                              "response": [
+                                                {
+                                                  "id": "d7802f42-e3b2-46e0-969a-56de2f1251bc",
+                                                  "name": "OK -- Get the managementpolicy successfully.",
+                                                  "originalRequest": {
+                                                    "method": "GET",
+                                                    "header": [
+                                                      {
+                                                        "key": "Accept",
+                                                        "value": "application/json"
+                                                      },
+                                                      {
+                                                        "description": "Added as a part of security scheme: oauth2",
+                                                        "key": "Authorization",
+                                                        "value": "<token>"
+                                                      }
+                                                    ],
+                                                    "url": {
+                                                      "raw": "{{baseUrl}}/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.Storage/storageAccounts/:accountName/managementPolicies/:managementPolicyName?api-version=<string>",
+                                                      "host": [
+                                                        "{{baseUrl}}"
+                                                      ],
+                                                      "path": [
+                                                        "subscriptions",
+                                                        ":subscriptionId",
+                                                        "resourceGroups",
+                                                        ":resourceGroupName",
+                                                        "providers",
+                                                        "Microsoft.Storage",
+                                                        "storageAccounts",
+                                                        ":accountName",
+                                                        "managementPolicies",
+                                                        ":managementPolicyName"
+                                                      ],
+                                                      "query": [
+                                                        {
+                                                          "description": "(Required) The API version to use for this operation.",
+                                                          "key": "api-version",
+                                                          "value": "<string>"
+                                                        }
+                                                      ],
+                                                      "variable": [
+                                                        {
+                                                          "key": "subscriptionId"
+                                                        },
+                                                        {
+                                                          "key": "resourceGroupName"
+                                                        },
+                                                        {
+                                                          "key": "accountName"
+                                                        },
+                                                        {
+                                                          "key": "managementPolicyName"
+                                                        }
+                                                      ]
+                                                    }
+                                                  },
+                                                  "status": "OK",
+                                                  "code": 200,
+                                                  "_postman_previewlanguage": "json",
+                                                  "header": [
+                                                    {
+                                                      "key": "Content-Type",
+                                                      "value": "application/json"
+                                                    }
+                                                  ],
+                                                  "cookie": [],
+                                                  "responseTime": null,
+                                                  "body": "{\n  \"properties\": {},\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"type\": \"<string>\"\n}",
+                                                  "createdAt": "2026-07-28T10:53:30.000Z",
+                                                  "updatedAt": "2026-07-28T10:53:30.000Z",
+                                                  "uid": "35240-d7802f42-e3b2-46e0-969a-56de2f1251bc"
+                                                }
+                                              ],
+                                              "createdAt": "2026-07-28T10:53:30.000Z",
+                                              "updatedAt": "2026-07-28T10:53:30.000Z",
+                                              "uid": "35240-3c8bbfde-69c4-425a-a3d9-1188df227596"
+                                            },
+                                            {
+                                              "name": "Azure Storage Account Management Policies_ Create or Update",
+                                              "id": "e02ca2f1-3d55-4aa6-9879-9ccc8074740b",
+                                              "protocolProfileBehavior": {
+                                                "disableBodyPruning": true
+                                              },
+                                              "request": {
+                                                "method": "PUT",
+                                                "header": [
+                                                  {
+                                                    "key": "Content-Type",
+                                                    "value": "application/json"
+                                                  },
+                                                  {
+                                                    "key": "Accept",
+                                                    "value": "application/json"
+                                                  }
+                                                ],
+                                                "body": {
+                                                  "mode": "raw",
+                                                  "raw": "{\n  \"properties\": {},\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"type\": \"<string>\"\n}",
+                                                  "options": {
+                                                    "raw": {
+                                                      "headerFamily": "json",
+                                                      "language": "json"
+                                                    }
+                                                  }
+                                                },
+                                                "url": {
+                                                  "raw": "{{baseUrl}}/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.Storage/storageAccounts/:accountName/managementPolicies/:managementPolicyName?api-version=<string>",
+                                                  "host": [
+                                                    "{{baseUrl}}"
+                                                  ],
+                                                  "path": [
+                                                    "subscriptions",
+                                                    ":subscriptionId",
+                                                    "resourceGroups",
+                                                    ":resourceGroupName",
+                                                    "providers",
+                                                    "Microsoft.Storage",
+                                                    "storageAccounts",
+                                                    ":accountName",
+                                                    "managementPolicies",
+                                                    ":managementPolicyName"
+                                                  ],
+                                                  "query": [
+                                                    {
+                                                      "description": "(Required) The API version to use for this operation.",
+                                                      "key": "api-version",
+                                                      "value": "<string>"
+                                                    }
+                                                  ],
+                                                  "variable": [
+                                                    {
+                                                      "id": "f0efb16a-23d5-485c-8b9d-ad353a1a8551",
+                                                      "key": "subscriptionId",
+                                                      "value": "<string>",
+                                                      "description": "(Required) The ID of the target subscription."
+                                                    },
+                                                    {
+                                                      "id": "2cdf6810-c1e8-4afe-b1d5-99103ca78fa0",
+                                                      "key": "resourceGroupName",
+                                                      "value": "yWF",
+                                                      "description": "(Required) The name of the resource group within the user's subscription. The name is case insensitive."
+                                                    },
+                                                    {
+                                                      "id": "b576082f-9993-4c36-b2a4-eaff7df8379a",
+                                                      "key": "accountName",
+                                                      "value": "<string>",
+                                                      "description": "(Required) The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only."
+                                                    },
+                                                    {
+                                                      "id": "9fed1dc6-e266-4e3e-bc79-818ec40bed8b",
+                                                      "key": "managementPolicyName",
+                                                      "value": "default",
+                                                      "description": "(Required) The name of the Storage Account Management Policy. It should always be 'default'"
+                                                    }
+                                                  ]
+                                                },
+                                                "description": "Sets the managementpolicy to the specified storage account."
+                                              },
+                                              "response": [
+                                                {
+                                                  "id": "5828d12b-57ac-4fad-9d5f-ec9286324159",
+                                                  "name": "OK -- Put managementpolicy successfully.",
+                                                  "originalRequest": {
+                                                    "method": "PUT",
+                                                    "header": [
+                                                      {
+                                                        "key": "Content-Type",
+                                                        "value": "application/json"
+                                                      },
+                                                      {
+                                                        "key": "Accept",
+                                                        "value": "application/json"
+                                                      },
+                                                      {
+                                                        "description": "Added as a part of security scheme: oauth2",
+                                                        "key": "Authorization",
+                                                        "value": "<token>"
+                                                      }
+                                                    ],
+                                                    "body": {
+                                                      "mode": "raw",
+                                                      "raw": "{\n  \"properties\": {},\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"type\": \"<string>\"\n}",
+                                                      "options": {
+                                                        "raw": {
+                                                          "headerFamily": "json",
+                                                          "language": "json"
+                                                        }
+                                                      }
+                                                    },
+                                                    "url": {
+                                                      "raw": "{{baseUrl}}/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.Storage/storageAccounts/:accountName/managementPolicies/:managementPolicyName?api-version=<string>",
+                                                      "host": [
+                                                        "{{baseUrl}}"
+                                                      ],
+                                                      "path": [
+                                                        "subscriptions",
+                                                        ":subscriptionId",
+                                                        "resourceGroups",
+                                                        ":resourceGroupName",
+                                                        "providers",
+                                                        "Microsoft.Storage",
+                                                        "storageAccounts",
+                                                        ":accountName",
+                                                        "managementPolicies",
+                                                        ":managementPolicyName"
+                                                      ],
+                                                      "query": [
+                                                        {
+                                                          "description": "(Required) The API version to use for this operation.",
+                                                          "key": "api-version",
+                                                          "value": "<string>"
+                                                        }
+                                                      ],
+                                                      "variable": [
+                                                        {
+                                                          "key": "subscriptionId"
+                                                        },
+                                                        {
+                                                          "key": "resourceGroupName"
+                                                        },
+                                                        {
+                                                          "key": "accountName"
+                                                        },
+                                                        {
+                                                          "key": "managementPolicyName"
+                                                        }
+                                                      ]
+                                                    }
+                                                  },
+                                                  "status": "OK",
+                                                  "code": 200,
+                                                  "_postman_previewlanguage": "json",
+                                                  "header": [
+                                                    {
+                                                      "key": "Content-Type",
+                                                      "value": "application/json"
+                                                    }
+                                                  ],
+                                                  "cookie": [],
+                                                  "responseTime": null,
+                                                  "body": "{\n  \"properties\": {},\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"type\": \"<string>\"\n}",
+                                                  "createdAt": "2026-07-28T10:53:30.000Z",
+                                                  "updatedAt": "2026-07-28T10:53:30.000Z",
+                                                  "uid": "35240-5828d12b-57ac-4fad-9d5f-ec9286324159"
+                                                }
+                                              ],
+                                              "createdAt": "2026-07-28T10:53:30.000Z",
+                                              "updatedAt": "2026-07-28T10:53:30.000Z",
+                                              "uid": "35240-e02ca2f1-3d55-4aa6-9879-9ccc8074740b"
+                                            }
+                                          ],
+                                          "id": "86107f3b-9dc9-41ac-8ff2-7b1e1a73cb3e",
+                                          "createdAt": "2026-07-28T10:53:30.000Z",
+                                          "updatedAt": "2026-07-28T10:53:30.000Z",
+                                          "uid": "35240-86107f3b-9dc9-41ac-8ff2-7b1e1a73cb3e"
+                                        }
+                                      ],
+                                      "id": "cce694c3-6b5b-4236-b440-31c883fbb1f0",
+                                      "createdAt": "2026-07-28T10:53:30.000Z",
+                                      "updatedAt": "2026-07-28T10:53:30.000Z",
+                                      "uid": "35240-cce694c3-6b5b-4236-b440-31c883fbb1f0"
+                                    }
+                                  ],
+                                  "id": "cfa0d87a-576d-47a9-84d1-df5cf3a60f86",
+                                  "createdAt": "2026-07-28T10:53:30.000Z",
+                                  "updatedAt": "2026-07-28T10:53:30.000Z",
+                                  "uid": "35240-cfa0d87a-576d-47a9-84d1-df5cf3a60f86"
+                                }
+                              ],
+                              "id": "63139a37-2edb-4005-9e9c-ab1e4bee8cb5",
+                              "createdAt": "2026-07-28T10:53:30.000Z",
+                              "updatedAt": "2026-07-28T10:53:30.000Z",
+                              "uid": "35240-63139a37-2edb-4005-9e9c-ab1e4bee8cb5"
+                            }
+                          ],
+                          "id": "5ba7d499-eb22-46ed-bf15-9ea8be8ce4a7",
+                          "createdAt": "2026-07-28T10:53:30.000Z",
+                          "updatedAt": "2026-07-28T10:53:30.000Z",
+                          "uid": "35240-5ba7d499-eb22-46ed-bf15-9ea8be8ce4a7"
+                        }
+                      ],
+                      "id": "4599258f-4845-473f-92a3-e67884df28d9",
+                      "createdAt": "2026-07-28T10:53:30.000Z",
+                      "updatedAt": "2026-07-28T10:53:30.000Z",
+                      "uid": "35240-4599258f-4845-473f-92a3-e67884df28d9"
+                    }
+                  ],
+                  "id": "13cbcf95-ebb5-4a55-bb00-393a881d6454",
+                  "createdAt": "2026-07-28T10:53:30.000Z",
+                  "updatedAt": "2026-07-28T10:53:30.000Z",
+                  "uid": "35240-13cbcf95-ebb5-4a55-bb00-393a881d6454"
+                }
+              ],
+              "id": "36d7a536-a372-4a27-b9b7-efb609f58fb3",
+              "createdAt": "2026-07-28T10:53:30.000Z",
+              "updatedAt": "2026-07-28T10:53:30.000Z",
+              "uid": "35240-36d7a536-a372-4a27-b9b7-efb609f58fb3"
+            }
+          ],
+          "id": "43036a13-8ab0-4184-9d97-2eb1a637857a",
+          "createdAt": "2026-07-28T10:53:30.000Z",
+          "updatedAt": "2026-07-28T10:53:30.000Z",
+          "uid": "35240-43036a13-8ab0-4184-9d97-2eb1a637857a"
+        }
+      ],
+      "id": "bad926f9-8670-4c93-a884-a00ce6c51779",
+      "createdAt": "2026-07-28T10:53:30.000Z",
+      "updatedAt": "2026-07-28T10:53:30.000Z",
+      "uid": "35240-bad926f9-8670-4c93-a884-a00ce6c51779"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "user_impersonation",
+        "type": "string"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://login.microsoftonline.com/common/oauth2/authorize",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "implicit",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://management.azure.com"
+    }
+  ]
+}

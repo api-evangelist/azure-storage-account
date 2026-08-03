@@ -1,0 +1,255 @@
+{
+  "info": {
+    "_postman_id": "57069951-7670-497a-b89f-9415d2086aad",
+    "name": "StorageManagementClient BlobContainers PrivateLinkResources API",
+    "description": "The Azure Storage Management API.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T10:53:56.000Z",
+    "updatedAt": "2026-07-28T10:53:56.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-57069951-7670-497a-b89f-9415d2086aad"
+  },
+  "item": [
+    {
+      "name": "subscriptions",
+      "item": [
+        {
+          "name": "{subscriptionId}",
+          "item": [
+            {
+              "name": "resourceGroups",
+              "item": [
+                {
+                  "name": "{resourceGroupName}",
+                  "item": [
+                    {
+                      "name": "providers",
+                      "item": [
+                        {
+                          "name": "Microsoft.Storage",
+                          "item": [
+                            {
+                              "name": "storageAccounts",
+                              "item": [
+                                {
+                                  "name": "{accountName}",
+                                  "item": [
+                                    {
+                                      "name": "privateLinkResources",
+                                      "item": [
+                                        {
+                                          "name": "Azure Storage Account Private Link Resources_ List by Storage Account",
+                                          "id": "51d878d3-c3a6-48de-bb54-2e240539d23b",
+                                          "protocolProfileBehavior": {
+                                            "disableBodyPruning": true
+                                          },
+                                          "request": {
+                                            "method": "GET",
+                                            "header": [
+                                              {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                              }
+                                            ],
+                                            "url": {
+                                              "raw": "{{baseUrl}}/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.Storage/storageAccounts/:accountName/privateLinkResources?api-version=<string>",
+                                              "host": [
+                                                "{{baseUrl}}"
+                                              ],
+                                              "path": [
+                                                "subscriptions",
+                                                ":subscriptionId",
+                                                "resourceGroups",
+                                                ":resourceGroupName",
+                                                "providers",
+                                                "Microsoft.Storage",
+                                                "storageAccounts",
+                                                ":accountName",
+                                                "privateLinkResources"
+                                              ],
+                                              "query": [
+                                                {
+                                                  "description": "(Required) The API version to use for this operation.",
+                                                  "key": "api-version",
+                                                  "value": "<string>"
+                                                }
+                                              ],
+                                              "variable": [
+                                                {
+                                                  "id": "cd68b0a9-2a66-4b98-897d-d6a9be208a30",
+                                                  "key": "subscriptionId",
+                                                  "value": "<string>",
+                                                  "description": "(Required) The ID of the target subscription."
+                                                },
+                                                {
+                                                  "id": "800374cf-8a6c-4373-91a6-a6bade5dcb7e",
+                                                  "key": "resourceGroupName",
+                                                  "value": "qS4t2",
+                                                  "description": "(Required) The name of the resource group within the user's subscription. The name is case insensitive."
+                                                },
+                                                {
+                                                  "id": "ff86a005-d1b5-4836-a176-c47009906a48",
+                                                  "key": "accountName",
+                                                  "value": "<string>",
+                                                  "description": "(Required) The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only."
+                                                }
+                                              ]
+                                            },
+                                            "description": "Gets the private link resources that need to be created for a storage account."
+                                          },
+                                          "response": [
+                                            {
+                                              "id": "4365f518-41fd-41ae-a938-409b68e91b01",
+                                              "name": "Successfully retrieved private link resources.",
+                                              "originalRequest": {
+                                                "method": "GET",
+                                                "header": [
+                                                  {
+                                                    "key": "Accept",
+                                                    "value": "application/json"
+                                                  },
+                                                  {
+                                                    "description": "Added as a part of security scheme: oauth2",
+                                                    "key": "Authorization",
+                                                    "value": "<token>"
+                                                  }
+                                                ],
+                                                "url": {
+                                                  "raw": "{{baseUrl}}/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.Storage/storageAccounts/:accountName/privateLinkResources?api-version=<string>",
+                                                  "host": [
+                                                    "{{baseUrl}}"
+                                                  ],
+                                                  "path": [
+                                                    "subscriptions",
+                                                    ":subscriptionId",
+                                                    "resourceGroups",
+                                                    ":resourceGroupName",
+                                                    "providers",
+                                                    "Microsoft.Storage",
+                                                    "storageAccounts",
+                                                    ":accountName",
+                                                    "privateLinkResources"
+                                                  ],
+                                                  "query": [
+                                                    {
+                                                      "description": "(Required) The API version to use for this operation.",
+                                                      "key": "api-version",
+                                                      "value": "<string>"
+                                                    }
+                                                  ],
+                                                  "variable": [
+                                                    {
+                                                      "key": "subscriptionId"
+                                                    },
+                                                    {
+                                                      "key": "resourceGroupName"
+                                                    },
+                                                    {
+                                                      "key": "accountName"
+                                                    }
+                                                  ]
+                                                }
+                                              },
+                                              "status": "OK",
+                                              "code": 200,
+                                              "_postman_previewlanguage": "json",
+                                              "header": [
+                                                {
+                                                  "key": "Content-Type",
+                                                  "value": "application/json"
+                                                }
+                                              ],
+                                              "cookie": [],
+                                              "responseTime": null,
+                                              "body": "{\n  \"value\": [\n    {\n      \"properties\": {},\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"type\": \"<string>\"\n    },\n    {\n      \"properties\": {},\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"type\": \"<string>\"\n    }\n  ]\n}",
+                                              "createdAt": "2026-07-28T10:53:57.000Z",
+                                              "updatedAt": "2026-07-28T10:53:57.000Z",
+                                              "uid": "35240-4365f518-41fd-41ae-a938-409b68e91b01"
+                                            }
+                                          ],
+                                          "createdAt": "2026-07-28T10:53:57.000Z",
+                                          "updatedAt": "2026-07-28T10:53:57.000Z",
+                                          "uid": "35240-51d878d3-c3a6-48de-bb54-2e240539d23b"
+                                        }
+                                      ],
+                                      "id": "bdd19bad-b9bd-4cce-b478-ec5e9a5dab0e",
+                                      "createdAt": "2026-07-28T10:53:57.000Z",
+                                      "updatedAt": "2026-07-28T10:53:57.000Z",
+                                      "uid": "35240-bdd19bad-b9bd-4cce-b478-ec5e9a5dab0e"
+                                    }
+                                  ],
+                                  "id": "cf9894ec-e016-4e66-a95f-eefa0158d515",
+                                  "createdAt": "2026-07-28T10:53:57.000Z",
+                                  "updatedAt": "2026-07-28T10:53:57.000Z",
+                                  "uid": "35240-cf9894ec-e016-4e66-a95f-eefa0158d515"
+                                }
+                              ],
+                              "id": "31112459-4a49-4b26-9e22-4dd6631da76d",
+                              "createdAt": "2026-07-28T10:53:57.000Z",
+                              "updatedAt": "2026-07-28T10:53:57.000Z",
+                              "uid": "35240-31112459-4a49-4b26-9e22-4dd6631da76d"
+                            }
+                          ],
+                          "id": "dc6a4b9c-20f2-4e84-91c4-0877f0b66c6b",
+                          "createdAt": "2026-07-28T10:53:57.000Z",
+                          "updatedAt": "2026-07-28T10:53:57.000Z",
+                          "uid": "35240-dc6a4b9c-20f2-4e84-91c4-0877f0b66c6b"
+                        }
+                      ],
+                      "id": "1ae62c9a-2a2b-4ffd-a960-4daecc2ae56d",
+                      "createdAt": "2026-07-28T10:53:57.000Z",
+                      "updatedAt": "2026-07-28T10:53:57.000Z",
+                      "uid": "35240-1ae62c9a-2a2b-4ffd-a960-4daecc2ae56d"
+                    }
+                  ],
+                  "id": "45d26ed1-ccf2-449d-b9d4-f679cc821942",
+                  "createdAt": "2026-07-28T10:53:57.000Z",
+                  "updatedAt": "2026-07-28T10:53:57.000Z",
+                  "uid": "35240-45d26ed1-ccf2-449d-b9d4-f679cc821942"
+                }
+              ],
+              "id": "2c669339-a05e-48e6-ad1a-571293353b1a",
+              "createdAt": "2026-07-28T10:53:57.000Z",
+              "updatedAt": "2026-07-28T10:53:57.000Z",
+              "uid": "35240-2c669339-a05e-48e6-ad1a-571293353b1a"
+            }
+          ],
+          "id": "3e4a0823-99ab-4b01-9531-8d0e7d3c3495",
+          "createdAt": "2026-07-28T10:53:57.000Z",
+          "updatedAt": "2026-07-28T10:53:57.000Z",
+          "uid": "35240-3e4a0823-99ab-4b01-9531-8d0e7d3c3495"
+        }
+      ],
+      "id": "ba1ddc2f-5412-4b2a-898c-2b3aef3b9f11",
+      "createdAt": "2026-07-28T10:53:57.000Z",
+      "updatedAt": "2026-07-28T10:53:57.000Z",
+      "uid": "35240-ba1ddc2f-5412-4b2a-898c-2b3aef3b9f11"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "user_impersonation",
+        "type": "string"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://login.microsoftonline.com/common/oauth2/authorize",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "implicit",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://management.azure.com"
+    }
+  ]
+}

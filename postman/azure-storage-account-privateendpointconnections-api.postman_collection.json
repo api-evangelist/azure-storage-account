@@ -1,0 +1,877 @@
+{
+  "info": {
+    "_postman_id": "cc2d9cce-815e-41b6-a71c-3dc52d8c145a",
+    "name": "StorageManagementClient BlobContainers PrivateEndpointConnections API",
+    "description": "The Azure Storage Management API.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T10:53:31.000Z",
+    "updatedAt": "2026-07-28T10:53:32.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-cc2d9cce-815e-41b6-a71c-3dc52d8c145a"
+  },
+  "item": [
+    {
+      "name": "subscriptions",
+      "item": [
+        {
+          "name": "{subscriptionId}",
+          "item": [
+            {
+              "name": "resourceGroups",
+              "item": [
+                {
+                  "name": "{resourceGroupName}",
+                  "item": [
+                    {
+                      "name": "providers",
+                      "item": [
+                        {
+                          "name": "Microsoft.Storage",
+                          "item": [
+                            {
+                              "name": "storageAccounts",
+                              "item": [
+                                {
+                                  "name": "{accountName}",
+                                  "item": [
+                                    {
+                                      "name": "privateEndpointConnections",
+                                      "item": [
+                                        {
+                                          "name": "{privateEndpointConnectionName}",
+                                          "item": [
+                                            {
+                                              "name": "Azure Storage Account Private Endpoint Connections_ Delete",
+                                              "id": "923e4804-1fd4-44b9-bc35-bdc379420c19",
+                                              "protocolProfileBehavior": {
+                                                "disableBodyPruning": true
+                                              },
+                                              "request": {
+                                                "method": "DELETE",
+                                                "header": [
+                                                  {
+                                                    "key": "Accept",
+                                                    "value": "application/json"
+                                                  }
+                                                ],
+                                                "url": {
+                                                  "raw": "{{baseUrl}}/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.Storage/storageAccounts/:accountName/privateEndpointConnections/:privateEndpointConnectionName?api-version=<string>",
+                                                  "host": [
+                                                    "{{baseUrl}}"
+                                                  ],
+                                                  "path": [
+                                                    "subscriptions",
+                                                    ":subscriptionId",
+                                                    "resourceGroups",
+                                                    ":resourceGroupName",
+                                                    "providers",
+                                                    "Microsoft.Storage",
+                                                    "storageAccounts",
+                                                    ":accountName",
+                                                    "privateEndpointConnections",
+                                                    ":privateEndpointConnectionName"
+                                                  ],
+                                                  "query": [
+                                                    {
+                                                      "description": "(Required) The API version to use for this operation.",
+                                                      "key": "api-version",
+                                                      "value": "<string>"
+                                                    }
+                                                  ],
+                                                  "variable": [
+                                                    {
+                                                      "id": "1721985a-f62c-416b-a13b-8c5a640435ab",
+                                                      "key": "subscriptionId",
+                                                      "value": "<string>",
+                                                      "description": "(Required) The ID of the target subscription."
+                                                    },
+                                                    {
+                                                      "id": "9f61d91a-be3d-4cb3-858e-0798578a7c4c",
+                                                      "key": "resourceGroupName",
+                                                      "value": "05YD",
+                                                      "description": "(Required) The name of the resource group within the user's subscription. The name is case insensitive."
+                                                    },
+                                                    {
+                                                      "id": "7a9d3677-8e0a-4be0-ac21-18971f9f6a7a",
+                                                      "key": "accountName",
+                                                      "value": "<string>",
+                                                      "description": "(Required) The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only."
+                                                    },
+                                                    {
+                                                      "id": "b73e040c-362b-4f98-9749-c2973760a8e3",
+                                                      "key": "privateEndpointConnectionName",
+                                                      "value": "<string>",
+                                                      "description": "(Required) The name of the private endpoint connection associated with the Storage Account"
+                                                    }
+                                                  ]
+                                                },
+                                                "description": "Deletes the specified private endpoint connection associated with the storage account."
+                                              },
+                                              "response": [
+                                                {
+                                                  "id": "9a93fae8-0912-4f74-96d6-8a3495639df6",
+                                                  "name": "OK -- Delete the private endpoint connection successfully.",
+                                                  "originalRequest": {
+                                                    "method": "DELETE",
+                                                    "header": [
+                                                      {
+                                                        "description": "Added as a part of security scheme: oauth2",
+                                                        "key": "Authorization",
+                                                        "value": "<token>"
+                                                      }
+                                                    ],
+                                                    "url": {
+                                                      "raw": "{{baseUrl}}/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.Storage/storageAccounts/:accountName/privateEndpointConnections/:privateEndpointConnectionName?api-version=<string>",
+                                                      "host": [
+                                                        "{{baseUrl}}"
+                                                      ],
+                                                      "path": [
+                                                        "subscriptions",
+                                                        ":subscriptionId",
+                                                        "resourceGroups",
+                                                        ":resourceGroupName",
+                                                        "providers",
+                                                        "Microsoft.Storage",
+                                                        "storageAccounts",
+                                                        ":accountName",
+                                                        "privateEndpointConnections",
+                                                        ":privateEndpointConnectionName"
+                                                      ],
+                                                      "query": [
+                                                        {
+                                                          "description": "(Required) The API version to use for this operation.",
+                                                          "key": "api-version",
+                                                          "value": "<string>"
+                                                        }
+                                                      ],
+                                                      "variable": [
+                                                        {
+                                                          "key": "subscriptionId"
+                                                        },
+                                                        {
+                                                          "key": "resourceGroupName"
+                                                        },
+                                                        {
+                                                          "key": "accountName"
+                                                        },
+                                                        {
+                                                          "key": "privateEndpointConnectionName"
+                                                        }
+                                                      ]
+                                                    }
+                                                  },
+                                                  "status": "OK",
+                                                  "code": 200,
+                                                  "_postman_previewlanguage": "text",
+                                                  "header": [],
+                                                  "cookie": [],
+                                                  "responseTime": null,
+                                                  "body": null,
+                                                  "createdAt": "2026-07-28T10:53:32.000Z",
+                                                  "updatedAt": "2026-07-28T10:53:32.000Z",
+                                                  "uid": "35240-9a93fae8-0912-4f74-96d6-8a3495639df6"
+                                                },
+                                                {
+                                                  "id": "56303137-55d1-4485-b54f-bb1f3a130fb8",
+                                                  "name": "No Content -- The private endpoint connection does not exist.",
+                                                  "originalRequest": {
+                                                    "method": "DELETE",
+                                                    "header": [
+                                                      {
+                                                        "description": "Added as a part of security scheme: oauth2",
+                                                        "key": "Authorization",
+                                                        "value": "<token>"
+                                                      }
+                                                    ],
+                                                    "url": {
+                                                      "raw": "{{baseUrl}}/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.Storage/storageAccounts/:accountName/privateEndpointConnections/:privateEndpointConnectionName?api-version=<string>",
+                                                      "host": [
+                                                        "{{baseUrl}}"
+                                                      ],
+                                                      "path": [
+                                                        "subscriptions",
+                                                        ":subscriptionId",
+                                                        "resourceGroups",
+                                                        ":resourceGroupName",
+                                                        "providers",
+                                                        "Microsoft.Storage",
+                                                        "storageAccounts",
+                                                        ":accountName",
+                                                        "privateEndpointConnections",
+                                                        ":privateEndpointConnectionName"
+                                                      ],
+                                                      "query": [
+                                                        {
+                                                          "description": "(Required) The API version to use for this operation.",
+                                                          "key": "api-version",
+                                                          "value": "<string>"
+                                                        }
+                                                      ],
+                                                      "variable": [
+                                                        {
+                                                          "key": "subscriptionId"
+                                                        },
+                                                        {
+                                                          "key": "resourceGroupName"
+                                                        },
+                                                        {
+                                                          "key": "accountName"
+                                                        },
+                                                        {
+                                                          "key": "privateEndpointConnectionName"
+                                                        }
+                                                      ]
+                                                    }
+                                                  },
+                                                  "status": "No Content",
+                                                  "code": 204,
+                                                  "_postman_previewlanguage": "text",
+                                                  "header": [],
+                                                  "cookie": [],
+                                                  "responseTime": null,
+                                                  "body": null,
+                                                  "createdAt": "2026-07-28T10:53:32.000Z",
+                                                  "updatedAt": "2026-07-28T10:53:32.000Z",
+                                                  "uid": "35240-56303137-55d1-4485-b54f-bb1f3a130fb8"
+                                                },
+                                                {
+                                                  "id": "0c7e369f-9805-4e65-ba66-9abc8f469e24",
+                                                  "name": "Error response describing why the operation failed.",
+                                                  "originalRequest": {
+                                                    "method": "DELETE",
+                                                    "header": [
+                                                      {
+                                                        "key": "Accept",
+                                                        "value": "application/json"
+                                                      },
+                                                      {
+                                                        "description": "Added as a part of security scheme: oauth2",
+                                                        "key": "Authorization",
+                                                        "value": "<token>"
+                                                      }
+                                                    ],
+                                                    "url": {
+                                                      "raw": "{{baseUrl}}/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.Storage/storageAccounts/:accountName/privateEndpointConnections/:privateEndpointConnectionName?api-version=<string>",
+                                                      "host": [
+                                                        "{{baseUrl}}"
+                                                      ],
+                                                      "path": [
+                                                        "subscriptions",
+                                                        ":subscriptionId",
+                                                        "resourceGroups",
+                                                        ":resourceGroupName",
+                                                        "providers",
+                                                        "Microsoft.Storage",
+                                                        "storageAccounts",
+                                                        ":accountName",
+                                                        "privateEndpointConnections",
+                                                        ":privateEndpointConnectionName"
+                                                      ],
+                                                      "query": [
+                                                        {
+                                                          "description": "(Required) The API version to use for this operation.",
+                                                          "key": "api-version",
+                                                          "value": "<string>"
+                                                        }
+                                                      ],
+                                                      "variable": [
+                                                        {
+                                                          "key": "subscriptionId"
+                                                        },
+                                                        {
+                                                          "key": "resourceGroupName"
+                                                        },
+                                                        {
+                                                          "key": "accountName"
+                                                        },
+                                                        {
+                                                          "key": "privateEndpointConnectionName"
+                                                        }
+                                                      ]
+                                                    }
+                                                  },
+                                                  "status": "Internal Server Error",
+                                                  "code": 500,
+                                                  "_postman_previewlanguage": "json",
+                                                  "header": [
+                                                    {
+                                                      "key": "Content-Type",
+                                                      "value": "application/json"
+                                                    }
+                                                  ],
+                                                  "cookie": [],
+                                                  "responseTime": null,
+                                                  "body": "{\n  \"code\": \"<string>\",\n  \"message\": \"<string>\"\n}",
+                                                  "createdAt": "2026-07-28T10:53:32.000Z",
+                                                  "updatedAt": "2026-07-28T10:53:32.000Z",
+                                                  "uid": "35240-0c7e369f-9805-4e65-ba66-9abc8f469e24"
+                                                }
+                                              ],
+                                              "createdAt": "2026-07-28T10:53:32.000Z",
+                                              "updatedAt": "2026-07-28T10:53:32.000Z",
+                                              "uid": "35240-923e4804-1fd4-44b9-bc35-bdc379420c19"
+                                            },
+                                            {
+                                              "name": "Azure Storage Account Private Endpoint Connections_ Get",
+                                              "id": "730145cb-5aa0-45c0-a3bb-04c838788caf",
+                                              "protocolProfileBehavior": {
+                                                "disableBodyPruning": true
+                                              },
+                                              "request": {
+                                                "method": "GET",
+                                                "header": [
+                                                  {
+                                                    "key": "Accept",
+                                                    "value": "application/json"
+                                                  }
+                                                ],
+                                                "url": {
+                                                  "raw": "{{baseUrl}}/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.Storage/storageAccounts/:accountName/privateEndpointConnections/:privateEndpointConnectionName?api-version=<string>",
+                                                  "host": [
+                                                    "{{baseUrl}}"
+                                                  ],
+                                                  "path": [
+                                                    "subscriptions",
+                                                    ":subscriptionId",
+                                                    "resourceGroups",
+                                                    ":resourceGroupName",
+                                                    "providers",
+                                                    "Microsoft.Storage",
+                                                    "storageAccounts",
+                                                    ":accountName",
+                                                    "privateEndpointConnections",
+                                                    ":privateEndpointConnectionName"
+                                                  ],
+                                                  "query": [
+                                                    {
+                                                      "description": "(Required) The API version to use for this operation.",
+                                                      "key": "api-version",
+                                                      "value": "<string>"
+                                                    }
+                                                  ],
+                                                  "variable": [
+                                                    {
+                                                      "id": "d3f788a6-4c07-446c-acfd-1077c5d422de",
+                                                      "key": "subscriptionId",
+                                                      "value": "<string>",
+                                                      "description": "(Required) The ID of the target subscription."
+                                                    },
+                                                    {
+                                                      "id": "c4b27fc7-a745-4545-914c-9b9c956cf9e6",
+                                                      "key": "resourceGroupName",
+                                                      "value": "05YD",
+                                                      "description": "(Required) The name of the resource group within the user's subscription. The name is case insensitive."
+                                                    },
+                                                    {
+                                                      "id": "bf384b80-d473-488d-a811-b3e8b949fde8",
+                                                      "key": "accountName",
+                                                      "value": "<string>",
+                                                      "description": "(Required) The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only."
+                                                    },
+                                                    {
+                                                      "id": "21ba9c0a-7760-402d-9ce3-a2f10b97a676",
+                                                      "key": "privateEndpointConnectionName",
+                                                      "value": "<string>",
+                                                      "description": "(Required) The name of the private endpoint connection associated with the Storage Account"
+                                                    }
+                                                  ]
+                                                },
+                                                "description": "Gets the specified private endpoint connection associated with the storage account."
+                                              },
+                                              "response": [
+                                                {
+                                                  "id": "0ba86794-40f9-46ac-8e9d-3589a142ec84",
+                                                  "name": "OK -- Get the private endpoint connection properties successfully.",
+                                                  "originalRequest": {
+                                                    "method": "GET",
+                                                    "header": [
+                                                      {
+                                                        "key": "Accept",
+                                                        "value": "application/json"
+                                                      },
+                                                      {
+                                                        "description": "Added as a part of security scheme: oauth2",
+                                                        "key": "Authorization",
+                                                        "value": "<token>"
+                                                      }
+                                                    ],
+                                                    "url": {
+                                                      "raw": "{{baseUrl}}/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.Storage/storageAccounts/:accountName/privateEndpointConnections/:privateEndpointConnectionName?api-version=<string>",
+                                                      "host": [
+                                                        "{{baseUrl}}"
+                                                      ],
+                                                      "path": [
+                                                        "subscriptions",
+                                                        ":subscriptionId",
+                                                        "resourceGroups",
+                                                        ":resourceGroupName",
+                                                        "providers",
+                                                        "Microsoft.Storage",
+                                                        "storageAccounts",
+                                                        ":accountName",
+                                                        "privateEndpointConnections",
+                                                        ":privateEndpointConnectionName"
+                                                      ],
+                                                      "query": [
+                                                        {
+                                                          "description": "(Required) The API version to use for this operation.",
+                                                          "key": "api-version",
+                                                          "value": "<string>"
+                                                        }
+                                                      ],
+                                                      "variable": [
+                                                        {
+                                                          "key": "subscriptionId"
+                                                        },
+                                                        {
+                                                          "key": "resourceGroupName"
+                                                        },
+                                                        {
+                                                          "key": "accountName"
+                                                        },
+                                                        {
+                                                          "key": "privateEndpointConnectionName"
+                                                        }
+                                                      ]
+                                                    }
+                                                  },
+                                                  "status": "OK",
+                                                  "code": 200,
+                                                  "_postman_previewlanguage": "json",
+                                                  "header": [
+                                                    {
+                                                      "key": "Content-Type",
+                                                      "value": "application/json"
+                                                    }
+                                                  ],
+                                                  "cookie": [],
+                                                  "responseTime": null,
+                                                  "body": "{\n  \"properties\": {},\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"type\": \"<string>\"\n}",
+                                                  "createdAt": "2026-07-28T10:53:32.000Z",
+                                                  "updatedAt": "2026-07-28T10:53:32.000Z",
+                                                  "uid": "35240-0ba86794-40f9-46ac-8e9d-3589a142ec84"
+                                                },
+                                                {
+                                                  "id": "bd915b85-5897-4b84-93fd-7323de8389ef",
+                                                  "name": "Error response describing why the operation failed.",
+                                                  "originalRequest": {
+                                                    "method": "GET",
+                                                    "header": [
+                                                      {
+                                                        "key": "Accept",
+                                                        "value": "application/json"
+                                                      },
+                                                      {
+                                                        "description": "Added as a part of security scheme: oauth2",
+                                                        "key": "Authorization",
+                                                        "value": "<token>"
+                                                      }
+                                                    ],
+                                                    "url": {
+                                                      "raw": "{{baseUrl}}/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.Storage/storageAccounts/:accountName/privateEndpointConnections/:privateEndpointConnectionName?api-version=<string>",
+                                                      "host": [
+                                                        "{{baseUrl}}"
+                                                      ],
+                                                      "path": [
+                                                        "subscriptions",
+                                                        ":subscriptionId",
+                                                        "resourceGroups",
+                                                        ":resourceGroupName",
+                                                        "providers",
+                                                        "Microsoft.Storage",
+                                                        "storageAccounts",
+                                                        ":accountName",
+                                                        "privateEndpointConnections",
+                                                        ":privateEndpointConnectionName"
+                                                      ],
+                                                      "query": [
+                                                        {
+                                                          "description": "(Required) The API version to use for this operation.",
+                                                          "key": "api-version",
+                                                          "value": "<string>"
+                                                        }
+                                                      ],
+                                                      "variable": [
+                                                        {
+                                                          "key": "subscriptionId"
+                                                        },
+                                                        {
+                                                          "key": "resourceGroupName"
+                                                        },
+                                                        {
+                                                          "key": "accountName"
+                                                        },
+                                                        {
+                                                          "key": "privateEndpointConnectionName"
+                                                        }
+                                                      ]
+                                                    }
+                                                  },
+                                                  "status": "Internal Server Error",
+                                                  "code": 500,
+                                                  "_postman_previewlanguage": "json",
+                                                  "header": [
+                                                    {
+                                                      "key": "Content-Type",
+                                                      "value": "application/json"
+                                                    }
+                                                  ],
+                                                  "cookie": [],
+                                                  "responseTime": null,
+                                                  "body": "{\n  \"code\": \"<string>\",\n  \"message\": \"<string>\"\n}",
+                                                  "createdAt": "2026-07-28T10:53:32.000Z",
+                                                  "updatedAt": "2026-07-28T10:53:32.000Z",
+                                                  "uid": "35240-bd915b85-5897-4b84-93fd-7323de8389ef"
+                                                }
+                                              ],
+                                              "createdAt": "2026-07-28T10:53:32.000Z",
+                                              "updatedAt": "2026-07-28T10:53:32.000Z",
+                                              "uid": "35240-730145cb-5aa0-45c0-a3bb-04c838788caf"
+                                            },
+                                            {
+                                              "name": "Azure Storage Account Private Endpoint Connections_ Put",
+                                              "id": "ea4d1cda-05cc-4f09-9c73-728a9ecfaf5b",
+                                              "protocolProfileBehavior": {
+                                                "disableBodyPruning": true
+                                              },
+                                              "request": {
+                                                "method": "PUT",
+                                                "header": [
+                                                  {
+                                                    "key": "Content-Type",
+                                                    "value": "application/json"
+                                                  },
+                                                  {
+                                                    "key": "Accept",
+                                                    "value": "application/json"
+                                                  }
+                                                ],
+                                                "body": {
+                                                  "mode": "raw",
+                                                  "raw": "{\n  \"properties\": {},\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"type\": \"<string>\"\n}",
+                                                  "options": {
+                                                    "raw": {
+                                                      "headerFamily": "json",
+                                                      "language": "json"
+                                                    }
+                                                  }
+                                                },
+                                                "url": {
+                                                  "raw": "{{baseUrl}}/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.Storage/storageAccounts/:accountName/privateEndpointConnections/:privateEndpointConnectionName?api-version=<string>",
+                                                  "host": [
+                                                    "{{baseUrl}}"
+                                                  ],
+                                                  "path": [
+                                                    "subscriptions",
+                                                    ":subscriptionId",
+                                                    "resourceGroups",
+                                                    ":resourceGroupName",
+                                                    "providers",
+                                                    "Microsoft.Storage",
+                                                    "storageAccounts",
+                                                    ":accountName",
+                                                    "privateEndpointConnections",
+                                                    ":privateEndpointConnectionName"
+                                                  ],
+                                                  "query": [
+                                                    {
+                                                      "description": "(Required) The API version to use for this operation.",
+                                                      "key": "api-version",
+                                                      "value": "<string>"
+                                                    }
+                                                  ],
+                                                  "variable": [
+                                                    {
+                                                      "id": "c19eb414-68c0-4862-86c4-8e2eb5a69f05",
+                                                      "key": "subscriptionId",
+                                                      "value": "<string>",
+                                                      "description": "(Required) The ID of the target subscription."
+                                                    },
+                                                    {
+                                                      "id": "c86f9a15-465f-4858-9a35-06a6a97d9e92",
+                                                      "key": "resourceGroupName",
+                                                      "value": "05YD",
+                                                      "description": "(Required) The name of the resource group within the user's subscription. The name is case insensitive."
+                                                    },
+                                                    {
+                                                      "id": "4989df70-5302-42f6-9539-78487a753815",
+                                                      "key": "accountName",
+                                                      "value": "<string>",
+                                                      "description": "(Required) The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only."
+                                                    },
+                                                    {
+                                                      "id": "24987cbb-8d0d-45e6-94b2-3baea0117e4f",
+                                                      "key": "privateEndpointConnectionName",
+                                                      "value": "<string>",
+                                                      "description": "(Required) The name of the private endpoint connection associated with the Storage Account"
+                                                    }
+                                                  ]
+                                                },
+                                                "description": "Update the state of specified private endpoint connection associated with the storage account."
+                                              },
+                                              "response": [
+                                                {
+                                                  "id": "2725a325-1ea7-4a51-b04d-fdd324bd73d8",
+                                                  "name": "OK -- Update the private endpoint connection properties successfully.",
+                                                  "originalRequest": {
+                                                    "method": "PUT",
+                                                    "header": [
+                                                      {
+                                                        "key": "Content-Type",
+                                                        "value": "application/json"
+                                                      },
+                                                      {
+                                                        "key": "Accept",
+                                                        "value": "application/json"
+                                                      },
+                                                      {
+                                                        "description": "Added as a part of security scheme: oauth2",
+                                                        "key": "Authorization",
+                                                        "value": "<token>"
+                                                      }
+                                                    ],
+                                                    "body": {
+                                                      "mode": "raw",
+                                                      "raw": "{\n  \"properties\": {},\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"type\": \"<string>\"\n}",
+                                                      "options": {
+                                                        "raw": {
+                                                          "headerFamily": "json",
+                                                          "language": "json"
+                                                        }
+                                                      }
+                                                    },
+                                                    "url": {
+                                                      "raw": "{{baseUrl}}/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.Storage/storageAccounts/:accountName/privateEndpointConnections/:privateEndpointConnectionName?api-version=<string>",
+                                                      "host": [
+                                                        "{{baseUrl}}"
+                                                      ],
+                                                      "path": [
+                                                        "subscriptions",
+                                                        ":subscriptionId",
+                                                        "resourceGroups",
+                                                        ":resourceGroupName",
+                                                        "providers",
+                                                        "Microsoft.Storage",
+                                                        "storageAccounts",
+                                                        ":accountName",
+                                                        "privateEndpointConnections",
+                                                        ":privateEndpointConnectionName"
+                                                      ],
+                                                      "query": [
+                                                        {
+                                                          "description": "(Required) The API version to use for this operation.",
+                                                          "key": "api-version",
+                                                          "value": "<string>"
+                                                        }
+                                                      ],
+                                                      "variable": [
+                                                        {
+                                                          "key": "subscriptionId"
+                                                        },
+                                                        {
+                                                          "key": "resourceGroupName"
+                                                        },
+                                                        {
+                                                          "key": "accountName"
+                                                        },
+                                                        {
+                                                          "key": "privateEndpointConnectionName"
+                                                        }
+                                                      ]
+                                                    }
+                                                  },
+                                                  "status": "OK",
+                                                  "code": 200,
+                                                  "_postman_previewlanguage": "json",
+                                                  "header": [
+                                                    {
+                                                      "key": "Content-Type",
+                                                      "value": "application/json"
+                                                    }
+                                                  ],
+                                                  "cookie": [],
+                                                  "responseTime": null,
+                                                  "body": "{\n  \"properties\": {},\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"type\": \"<string>\"\n}",
+                                                  "createdAt": "2026-07-28T10:53:32.000Z",
+                                                  "updatedAt": "2026-07-28T10:53:32.000Z",
+                                                  "uid": "35240-2725a325-1ea7-4a51-b04d-fdd324bd73d8"
+                                                },
+                                                {
+                                                  "id": "443ea241-deb0-431b-98c1-c3b5ce2b9398",
+                                                  "name": "Error response describing why the operation failed.",
+                                                  "originalRequest": {
+                                                    "method": "PUT",
+                                                    "header": [
+                                                      {
+                                                        "key": "Content-Type",
+                                                        "value": "application/json"
+                                                      },
+                                                      {
+                                                        "key": "Accept",
+                                                        "value": "application/json"
+                                                      },
+                                                      {
+                                                        "description": "Added as a part of security scheme: oauth2",
+                                                        "key": "Authorization",
+                                                        "value": "<token>"
+                                                      }
+                                                    ],
+                                                    "body": {
+                                                      "mode": "raw",
+                                                      "raw": "{\n  \"properties\": {},\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"type\": \"<string>\"\n}",
+                                                      "options": {
+                                                        "raw": {
+                                                          "headerFamily": "json",
+                                                          "language": "json"
+                                                        }
+                                                      }
+                                                    },
+                                                    "url": {
+                                                      "raw": "{{baseUrl}}/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.Storage/storageAccounts/:accountName/privateEndpointConnections/:privateEndpointConnectionName?api-version=<string>",
+                                                      "host": [
+                                                        "{{baseUrl}}"
+                                                      ],
+                                                      "path": [
+                                                        "subscriptions",
+                                                        ":subscriptionId",
+                                                        "resourceGroups",
+                                                        ":resourceGroupName",
+                                                        "providers",
+                                                        "Microsoft.Storage",
+                                                        "storageAccounts",
+                                                        ":accountName",
+                                                        "privateEndpointConnections",
+                                                        ":privateEndpointConnectionName"
+                                                      ],
+                                                      "query": [
+                                                        {
+                                                          "description": "(Required) The API version to use for this operation.",
+                                                          "key": "api-version",
+                                                          "value": "<string>"
+                                                        }
+                                                      ],
+                                                      "variable": [
+                                                        {
+                                                          "key": "subscriptionId"
+                                                        },
+                                                        {
+                                                          "key": "resourceGroupName"
+                                                        },
+                                                        {
+                                                          "key": "accountName"
+                                                        },
+                                                        {
+                                                          "key": "privateEndpointConnectionName"
+                                                        }
+                                                      ]
+                                                    }
+                                                  },
+                                                  "status": "Internal Server Error",
+                                                  "code": 500,
+                                                  "_postman_previewlanguage": "json",
+                                                  "header": [
+                                                    {
+                                                      "key": "Content-Type",
+                                                      "value": "application/json"
+                                                    }
+                                                  ],
+                                                  "cookie": [],
+                                                  "responseTime": null,
+                                                  "body": "{\n  \"code\": \"<string>\",\n  \"message\": \"<string>\"\n}",
+                                                  "createdAt": "2026-07-28T10:53:32.000Z",
+                                                  "updatedAt": "2026-07-28T10:53:32.000Z",
+                                                  "uid": "35240-443ea241-deb0-431b-98c1-c3b5ce2b9398"
+                                                }
+                                              ],
+                                              "createdAt": "2026-07-28T10:53:32.000Z",
+                                              "updatedAt": "2026-07-28T10:53:32.000Z",
+                                              "uid": "35240-ea4d1cda-05cc-4f09-9c73-728a9ecfaf5b"
+                                            }
+                                          ],
+                                          "id": "fdffae6d-2872-47e2-bc9c-9a600270beb6",
+                                          "createdAt": "2026-07-28T10:53:32.000Z",
+                                          "updatedAt": "2026-07-28T10:53:32.000Z",
+                                          "uid": "35240-fdffae6d-2872-47e2-bc9c-9a600270beb6"
+                                        }
+                                      ],
+                                      "id": "e00c9cf6-c842-4db8-90ee-6cd0a438f543",
+                                      "createdAt": "2026-07-28T10:53:32.000Z",
+                                      "updatedAt": "2026-07-28T10:53:32.000Z",
+                                      "uid": "35240-e00c9cf6-c842-4db8-90ee-6cd0a438f543"
+                                    }
+                                  ],
+                                  "id": "c59ca7e8-db6f-4821-baa6-ee7b93527287",
+                                  "createdAt": "2026-07-28T10:53:32.000Z",
+                                  "updatedAt": "2026-07-28T10:53:32.000Z",
+                                  "uid": "35240-c59ca7e8-db6f-4821-baa6-ee7b93527287"
+                                }
+                              ],
+                              "id": "88a25d79-ea97-4290-a68c-e4b154dfc92c",
+                              "createdAt": "2026-07-28T10:53:32.000Z",
+                              "updatedAt": "2026-07-28T10:53:32.000Z",
+                              "uid": "35240-88a25d79-ea97-4290-a68c-e4b154dfc92c"
+                            }
+                          ],
+                          "id": "ce024e04-30de-4a69-a142-7516ac25684a",
+                          "createdAt": "2026-07-28T10:53:32.000Z",
+                          "updatedAt": "2026-07-28T10:53:32.000Z",
+                          "uid": "35240-ce024e04-30de-4a69-a142-7516ac25684a"
+                        }
+                      ],
+                      "id": "dee82da8-719c-409d-9e34-82fe4808c4a8",
+                      "createdAt": "2026-07-28T10:53:32.000Z",
+                      "updatedAt": "2026-07-28T10:53:32.000Z",
+                      "uid": "35240-dee82da8-719c-409d-9e34-82fe4808c4a8"
+                    }
+                  ],
+                  "id": "90f4560f-c495-4b48-8792-6621426084c6",
+                  "createdAt": "2026-07-28T10:53:32.000Z",
+                  "updatedAt": "2026-07-28T10:53:32.000Z",
+                  "uid": "35240-90f4560f-c495-4b48-8792-6621426084c6"
+                }
+              ],
+              "id": "3c7a3812-08b2-4dcf-800b-dc00a9cf7584",
+              "createdAt": "2026-07-28T10:53:32.000Z",
+              "updatedAt": "2026-07-28T10:53:32.000Z",
+              "uid": "35240-3c7a3812-08b2-4dcf-800b-dc00a9cf7584"
+            }
+          ],
+          "id": "fb5660e2-26fe-44e8-a175-a71345312f4c",
+          "createdAt": "2026-07-28T10:53:32.000Z",
+          "updatedAt": "2026-07-28T10:53:32.000Z",
+          "uid": "35240-fb5660e2-26fe-44e8-a175-a71345312f4c"
+        }
+      ],
+      "id": "f15003c1-2b62-49cc-925c-a3de9409781b",
+      "createdAt": "2026-07-28T10:53:32.000Z",
+      "updatedAt": "2026-07-28T10:53:32.000Z",
+      "uid": "35240-f15003c1-2b62-49cc-925c-a3de9409781b"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "user_impersonation",
+        "type": "string"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://login.microsoftonline.com/common/oauth2/authorize",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "implicit",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://management.azure.com"
+    }
+  ]
+}
