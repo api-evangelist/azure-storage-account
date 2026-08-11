@@ -44,26 +44,8 @@ apis:
   - type: Authentication
     url: >-
       https://learn.microsoft.com/en-us/rest/api/storageservices/authorize-requests-to-azure-storage
-  - type: X-NaftikoCapability
-    url: capabilities/blob-blobcontainers.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/blob-blobservice.yaml
   - type: Documentation
     url: https://learn.microsoft.com/en-us/azure/storage/queues/
-  - type: X-NaftikoCapability
-    url: capabilities/management-locationusage.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/management-managementpolicies.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/management-operations.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/management-privateendpointconnections.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/management-privatelinkresources.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/management-skus.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/management-storageaccounts.yaml
   - type: Documentation
     url: https://learn.microsoft.com/en-us/azure/storage/tables/
   - type: Documentation
@@ -83,26 +65,8 @@ apis:
   - type: Authentication
     url: >-
       https://learn.microsoft.com/en-us/rest/api/storageservices/authorize-requests-to-azure-storage
-  - type: X-NaftikoCapability
-    url: capabilities/blob-blobcontainers.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/blob-blobservice.yaml
   - type: Documentation
     url: https://learn.microsoft.com/en-us/azure/storage/queues/
-  - type: X-NaftikoCapability
-    url: capabilities/management-locationusage.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/management-managementpolicies.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/management-operations.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/management-privateendpointconnections.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/management-privatelinkresources.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/management-skus.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/management-storageaccounts.yaml
   - type: Documentation
     url: https://learn.microsoft.com/en-us/azure/storage/tables/
   - type: Documentation
@@ -122,26 +86,8 @@ apis:
   - type: Authentication
     url: >-
       https://learn.microsoft.com/en-us/rest/api/storageservices/authorize-requests-to-azure-storage
-  - type: X-NaftikoCapability
-    url: capabilities/blob-blobcontainers.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/blob-blobservice.yaml
   - type: Documentation
     url: https://learn.microsoft.com/en-us/azure/storage/queues/
-  - type: X-NaftikoCapability
-    url: capabilities/management-locationusage.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/management-managementpolicies.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/management-operations.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/management-privateendpointconnections.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/management-privatelinkresources.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/management-skus.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/management-storageaccounts.yaml
   - type: Documentation
     url: https://learn.microsoft.com/en-us/azure/storage/tables/
   - type: Documentation
@@ -162,26 +108,8 @@ apis:
   - type: Authentication
     url: >-
       https://learn.microsoft.com/en-us/rest/api/storageservices/authorize-requests-to-azure-storage
-  - type: X-NaftikoCapability
-    url: capabilities/blob-blobcontainers.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/blob-blobservice.yaml
   - type: Documentation
     url: https://learn.microsoft.com/en-us/azure/storage/queues/
-  - type: X-NaftikoCapability
-    url: capabilities/management-locationusage.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/management-managementpolicies.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/management-operations.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/management-privateendpointconnections.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/management-privatelinkresources.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/management-skus.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/management-storageaccounts.yaml
   - type: Documentation
     url: https://learn.microsoft.com/en-us/azure/storage/tables/
   - type: Documentation
@@ -201,26 +129,8 @@ apis:
   - type: Authentication
     url: >-
       https://learn.microsoft.com/en-us/rest/api/storageservices/authorize-requests-to-azure-storage
-  - type: X-NaftikoCapability
-    url: capabilities/blob-blobcontainers.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/blob-blobservice.yaml
   - type: Documentation
     url: https://learn.microsoft.com/en-us/azure/storage/queues/
-  - type: X-NaftikoCapability
-    url: capabilities/management-locationusage.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/management-managementpolicies.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/management-operations.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/management-privateendpointconnections.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/management-privatelinkresources.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/management-skus.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/management-storageaccounts.yaml
   - type: Documentation
     url: https://learn.microsoft.com/en-us/azure/storage/tables/
   - type: Documentation
@@ -241,26 +151,8 @@ apis:
   - type: Authentication
     url: >-
       https://learn.microsoft.com/en-us/rest/api/storageservices/authorize-requests-to-azure-storage
-  - type: X-NaftikoCapability
-    url: capabilities/blob-blobcontainers.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/blob-blobservice.yaml
   - type: Documentation
     url: https://learn.microsoft.com/en-us/azure/storage/queues/
-  - type: X-NaftikoCapability
-    url: capabilities/management-locationusage.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/management-managementpolicies.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/management-operations.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/management-privateendpointconnections.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/management-privatelinkresources.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/management-skus.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/management-storageaccounts.yaml
   - type: Documentation
     url: https://learn.microsoft.com/en-us/azure/storage/tables/
   - type: Documentation
@@ -281,26 +173,8 @@ apis:
   - type: Authentication
     url: >-
       https://learn.microsoft.com/en-us/rest/api/storageservices/authorize-requests-to-azure-storage
-  - type: X-NaftikoCapability
-    url: capabilities/blob-blobcontainers.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/blob-blobservice.yaml
   - type: Documentation
     url: https://learn.microsoft.com/en-us/azure/storage/queues/
-  - type: X-NaftikoCapability
-    url: capabilities/management-locationusage.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/management-managementpolicies.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/management-operations.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/management-privateendpointconnections.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/management-privatelinkresources.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/management-skus.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/management-storageaccounts.yaml
   - type: Documentation
     url: https://learn.microsoft.com/en-us/azure/storage/tables/
   - type: Documentation
@@ -320,26 +194,8 @@ apis:
   - type: Authentication
     url: >-
       https://learn.microsoft.com/en-us/rest/api/storageservices/authorize-requests-to-azure-storage
-  - type: X-NaftikoCapability
-    url: capabilities/blob-blobcontainers.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/blob-blobservice.yaml
   - type: Documentation
     url: https://learn.microsoft.com/en-us/azure/storage/queues/
-  - type: X-NaftikoCapability
-    url: capabilities/management-locationusage.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/management-managementpolicies.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/management-operations.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/management-privateendpointconnections.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/management-privatelinkresources.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/management-skus.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/management-storageaccounts.yaml
   - type: Documentation
     url: https://learn.microsoft.com/en-us/azure/storage/tables/
   - type: Documentation
@@ -360,26 +216,8 @@ apis:
   - type: Authentication
     url: >-
       https://learn.microsoft.com/en-us/rest/api/storageservices/authorize-requests-to-azure-storage
-  - type: X-NaftikoCapability
-    url: capabilities/blob-blobcontainers.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/blob-blobservice.yaml
   - type: Documentation
     url: https://learn.microsoft.com/en-us/azure/storage/queues/
-  - type: X-NaftikoCapability
-    url: capabilities/management-locationusage.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/management-managementpolicies.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/management-operations.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/management-privateendpointconnections.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/management-privatelinkresources.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/management-skus.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/management-storageaccounts.yaml
   - type: Documentation
     url: https://learn.microsoft.com/en-us/azure/storage/tables/
   - type: Documentation
