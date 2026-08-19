@@ -1,0 +1,640 @@
+{
+  "item": [
+    {
+      "id": "96bc12ae-4c93-4c3f-a01b-443c6e051f60",
+      "name": "ManagementPolicies",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "3169e2ec-cab3-4669-94b9-e6f77d9efbd3",
+          "name": "Azure Storage Account Management Policies_ Delete",
+          "request": {
+            "name": "Azure Storage Account Management Policies_ Delete",
+            "description": {
+              "content": "Deletes the managementpolicy associated with the specified storage account.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "subscriptions",
+                ":subscriptionId",
+                "resourceGroups",
+                ":resourceGroupName",
+                "providers",
+                "Microsoft.Storage",
+                "storageAccounts",
+                ":accountName",
+                "managementPolicies",
+                ":managementPolicyName"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>",
+                  "description": "(Required) The API version to use for this operation."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "resourceGroupName",
+                  "description": "(Required) The name of the resource group within the user's subscription. The name is case insensitive."
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "accountName",
+                  "description": "(Required) The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only."
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "subscriptionId",
+                  "description": "(Required) The ID of the target subscription."
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "managementPolicyName",
+                  "description": "(Required) The name of the Storage Account Management Policy. It should always be 'default'"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1039e892-da78-469d-a260-405a970d310e",
+              "name": "OK -- Delete the managementpolicy successfully.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "subscriptions",
+                    ":subscriptionId",
+                    "resourceGroups",
+                    ":resourceGroupName",
+                    "providers",
+                    "Microsoft.Storage",
+                    "storageAccounts",
+                    ":accountName",
+                    "managementPolicies",
+                    ":managementPolicyName"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "2019-06-01"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "resourceGroupName",
+                      "description": "(Required) The name of the resource group within the user's subscription. The name is case insensitive."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "accountName",
+                      "description": "(Required) The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "subscriptionId",
+                      "description": "(Required) The ID of the target subscription."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "managementPolicyName",
+                      "description": "(Required) The name of the Storage Account Management Policy. It should always be 'default'"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "d0abc089-9e8b-4126-b51f-25e4a90b3f34",
+              "name": "No Content -- The managementpolicy does not exist.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "subscriptions",
+                    ":subscriptionId",
+                    "resourceGroups",
+                    ":resourceGroupName",
+                    "providers",
+                    "Microsoft.Storage",
+                    "storageAccounts",
+                    ":accountName",
+                    "managementPolicies",
+                    ":managementPolicyName"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "2019-06-01"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "resourceGroupName",
+                      "description": "(Required) The name of the resource group within the user's subscription. The name is case insensitive."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "accountName",
+                      "description": "(Required) The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "subscriptionId",
+                      "description": "(Required) The ID of the target subscription."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "managementPolicyName",
+                      "description": "(Required) The name of the Storage Account Management Policy. It should always be 'default'"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "39b8754a-1083-45d3-8ce4-d9a8a064952b",
+          "name": "Azure Storage Account Management Policies_ Get",
+          "request": {
+            "name": "Azure Storage Account Management Policies_ Get",
+            "description": {
+              "content": "Gets the managementpolicy associated with the specified storage account.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "subscriptions",
+                ":subscriptionId",
+                "resourceGroups",
+                ":resourceGroupName",
+                "providers",
+                "Microsoft.Storage",
+                "storageAccounts",
+                ":accountName",
+                "managementPolicies",
+                ":managementPolicyName"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>",
+                  "description": "(Required) The API version to use for this operation."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "resourceGroupName",
+                  "description": "(Required) The name of the resource group within the user's subscription. The name is case insensitive."
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "accountName",
+                  "description": "(Required) The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only."
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "subscriptionId",
+                  "description": "(Required) The ID of the target subscription."
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "managementPolicyName",
+                  "description": "(Required) The name of the Storage Account Management Policy. It should always be 'default'"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "98083ee6-b16f-4118-a170-697ad48c34a1",
+              "name": "OK -- Get the managementpolicy successfully.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "subscriptions",
+                    ":subscriptionId",
+                    "resourceGroups",
+                    ":resourceGroupName",
+                    "providers",
+                    "Microsoft.Storage",
+                    "storageAccounts",
+                    ":accountName",
+                    "managementPolicies",
+                    ":managementPolicyName"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "2019-06-01"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "resourceGroupName",
+                      "description": "(Required) The name of the resource group within the user's subscription. The name is case insensitive."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "accountName",
+                      "description": "(Required) The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "subscriptionId",
+                      "description": "(Required) The ID of the target subscription."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "managementPolicyName",
+                      "description": "(Required) The name of the Storage Account Management Policy. It should always be 'default'"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"/subscriptions/{subscription-id}/resourceGroups/res7231/providers/Microsoft.Storage/storageAccounts/sto288/managementPolicies/default\",\n  \"name\": \"DefaultManagementPolicy\",\n  \"properties\": {\n    \"lastModifiedTime\": \"2018-06-08T03:01:55.7168089Z\",\n    \"policy\": {\n      \"rules\": [\n        {\n          \"definition\": {\n            \"actions\": {\n              \"baseBlob\": {\n                \"delete\": {\n                  \"daysAfterModificationGreaterThan\": 1000\n                },\n                \"tierToArchive\": {\n                  \"daysAfterModificationGreaterThan\": 90\n                },\n                \"tierToCool\": {\n                  \"daysAfterModificationGreaterThan\": 30\n                }\n              },\n              \"snapshot\": {\n                \"delete\": {\n                  \"daysAfterCreationGreaterThan\": 30\n                }\n              }\n            },\n            \"filters\": {\n              \"blobTypes\": [\n                \"blockBlob\"\n              ],\n              \"prefixMatch\": [\n                \"olcmtestcontainer\"\n              ]\n            }\n          },\n          \"enabled\": true,\n          \"name\": \"olcmtest\",\n          \"type\": \"Lifecycle\"\n        }\n      ]\n    }\n  },\n  \"type\": \"Microsoft.Storage/storageAccounts/managementPolicies\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "68578779-83cd-418f-9128-ef5fb7dc2668",
+          "name": "Azure Storage Account Management Policies_ Create or Update",
+          "request": {
+            "name": "Azure Storage Account Management Policies_ Create or Update",
+            "description": {
+              "content": "Sets the managementpolicy to the specified storage account.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "subscriptions",
+                ":subscriptionId",
+                "resourceGroups",
+                ":resourceGroupName",
+                "providers",
+                "Microsoft.Storage",
+                "storageAccounts",
+                ":accountName",
+                "managementPolicies",
+                ":managementPolicyName"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>",
+                  "description": "(Required) The API version to use for this operation."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "resourceGroupName",
+                  "description": "(Required) The name of the resource group within the user's subscription. The name is case insensitive."
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "accountName",
+                  "description": "(Required) The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only."
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "subscriptionId",
+                  "description": "(Required) The ID of the target subscription."
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "managementPolicyName",
+                  "description": "(Required) The name of the Storage Account Management Policy. It should always be 'default'"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"properties\": {\n    \"policy\": {\n      \"rules\": [\n        {\n          \"name\": \"<string>\",\n          \"type\": \"<string>\",\n          \"definition\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"enabled\": \"<boolean>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"type\": \"<string>\",\n          \"definition\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"enabled\": \"<boolean>\"\n        }\n      ]\n    }\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "3ad97171-d2ba-4af6-a72f-54bad9401416",
+              "name": "OK -- Put managementpolicy successfully.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "subscriptions",
+                    ":subscriptionId",
+                    "resourceGroups",
+                    ":resourceGroupName",
+                    "providers",
+                    "Microsoft.Storage",
+                    "storageAccounts",
+                    ":accountName",
+                    "managementPolicies",
+                    ":managementPolicyName"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "2019-06-01"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "resourceGroupName",
+                      "description": "(Required) The name of the resource group within the user's subscription. The name is case insensitive."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "accountName",
+                      "description": "(Required) The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "subscriptionId",
+                      "description": "(Required) The ID of the target subscription."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "managementPolicyName",
+                      "description": "(Required) The name of the Storage Account Management Policy. It should always be 'default'"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"properties\": {\n    \"policy\": {\n      \"rules\": [\n        {\n          \"name\": \"<string>\",\n          \"type\": \"<string>\",\n          \"definition\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"enabled\": \"<boolean>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"type\": \"<string>\",\n          \"definition\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"enabled\": \"<boolean>\"\n        }\n      ]\n    }\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"/subscriptions/{subscription-id}/resourceGroups/res7231/providers/Microsoft.Storage/storageAccounts/sto288/managementPolicies/default\",\n  \"name\": \"DefaultManagementPolicy\",\n  \"properties\": {\n    \"lastModifiedTime\": \"2018-06-08T02:53:39.0932539Z\",\n    \"policy\": {\n      \"rules\": [\n        {\n          \"definition\": {\n            \"actions\": {\n              \"baseBlob\": {\n                \"delete\": {\n                  \"daysAfterModificationGreaterThan\": 1000\n                },\n                \"tierToArchive\": {\n                  \"daysAfterModificationGreaterThan\": 90\n                },\n                \"tierToCool\": {\n                  \"daysAfterModificationGreaterThan\": 30\n                }\n              },\n              \"snapshot\": {\n                \"delete\": {\n                  \"daysAfterCreationGreaterThan\": 30\n                }\n              }\n            },\n            \"filters\": {\n              \"blobTypes\": [\n                \"blockBlob\"\n              ],\n              \"prefixMatch\": [\n                \"olcmtestcontainer\"\n              ]\n            }\n          },\n          \"enabled\": true,\n          \"name\": \"olcmtest\",\n          \"type\": \"Lifecycle\"\n        }\n      ]\n    }\n  },\n  \"type\": \"Microsoft.Storage/storageAccounts/managementPolicies\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://management.azure.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "user_impersonation"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://login.microsoftonline.com/common/oauth2/authorize"
+      },
+      {
+        "key": "grant_type",
+        "value": "implicit"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "66e6d1ca-4850-4cb4-b91f-d1bd1042fd82",
+    "name": "StorageManagementClient BlobContainers ManagementPolicies API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Azure Storage Management API.",
+      "type": "text/plain"
+    }
+  }
+}
