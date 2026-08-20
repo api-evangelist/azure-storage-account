@@ -119,7 +119,8 @@ apis:
   description: The Operations API from Azure Storage Account — 1 operation(s) for operations.
   humanURL: https://learn.microsoft.com/en-us/rest/api/storageservices/blob-service-rest-api
   baseURL: https://{account}.blob.core.windows.net
-  tags:
+  tags: []
+  tags_raw:
   - Operations
   properties:
   - type: OpenAPI
@@ -185,6 +186,8 @@ apis:
   humanURL: https://learn.microsoft.com/en-us/rest/api/storageservices/blob-service-rest-api
   baseURL: https://{account}.blob.core.windows.net
   tags:
+  - SKUs
+  tags_raw:
   - Skus
   properties:
   - type: OpenAPI
