@@ -3,6 +3,18 @@ name: Azure Storage Account
 description: Collection of APIs for Azure Storage Account services including Blob, Queue, Table, and File storage, providing
   highly available, massively scalable, durable, and secure storage for a variety of data objects.
 type: Index
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: paid
   onboarding: self-serve
